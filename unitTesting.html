@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
 </head>
 
 <body>
@@ -51,7 +52,6 @@
                             <li class="dropdown-submenu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Related Technologies</a>
                                 <ul class="dropdown-menu">
-
                                     <li><a href="potentialTechnologies.html">Potential Programming Languages, Libraries, APIs, Frameworks</a></li>
                                     <li><a href="potentialAlgorithms.html">Potential Algorithms</a></li>
                                 </ul>
@@ -112,27 +112,33 @@
         </div>
 
     </nav>
-    <div class="container text-center">
-        <h2><strong> Research</strong></h2>
-        <p> research</p>
-
-
+    <div class="container">
+        <h2><strong> Unit Testing</strong></h2>
     </div>
 
 
-    <footer class="footer-distributed">
+    <div class="container-fluid">
+        
+        <p>As part of the unit testing for our Android application, we are developing local unit tests that can run on the JVM. These tests run much faster than the time required to deploy and run tests on an Android device, and ensure stability of each section within the whole application.</p>
+
+        <p>For our unit tests, we have created a sample json file, as this is the form in which data will come from the fitbit API. The first task is to retrieve data from the json file and convert it to a string. From there, our unit tests take the string and interpret it as an array. This allows us to retrieve individual objects from the file. </p>
+</div>
+<div class="container">
+    <img src="img/json.png">
+</div>
+<div class="container-fluid">
+
+<p>The first two tests check that the data is in the correct form; it checks that all times are strings and all heart rates are integers. The next test ensures each element refers to the correct data. More specifically, we are checking that each time is mapped to the correct heart rate. 
+ </p>
+    </div>
 
 
-        <div class="footer-left">
-            <p>
-                
-                COMP214P Systems Engineering - Team 31
-            </p>
-        </div>
 
     </footer>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

@@ -51,7 +51,6 @@
                             <li class="dropdown-submenu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Related Technologies</a>
                                 <ul class="dropdown-menu">
-
                                     <li><a href="potentialTechnologies.html">Potential Programming Languages, Libraries, APIs, Frameworks</a></li>
                                     <li><a href="potentialAlgorithms.html">Potential Algorithms</a></li>
                                 </ul>
@@ -113,13 +112,141 @@
 
     </nav>
     <div class="container text-center">
-        <h2><strong> Research</strong></h2>
-        <p> research</p>
-
-
+        <h2><strong> Gathering Requirements</strong></h2>
     </div>
+    <div class="container-fluid">
+        
+        <h3><strong>1. First Meeting with Client</strong></h3>
+        <p> Our first step for gathering requirements was an initial meeting with our client, Catherine Holloway. This meeting told us what software and hardware the client is intending we use at this point and what the client is expecting regarding the features of the application. We also gathered information on what other data we would need to collected in order to complete the requirements. 
+</p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Information Gathered</th>
+              <th>Analysis of Information</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+                <td><b>Hardware</b>
+                    <p>The sensor: At this stage of the project, it was intended we use a bespoke sensor, developed within our client’s department specifically for this project. </p>
+                    <li>   bluetooth smart system on chip </li>
+                    <li>   air pressure/ temp </li>
+                    <li>   real time clock </li>
+                    <li>   micro SD card storage </li>
+                    <li>   battery level monitor  </li>
+                    <li>   non-volatile flash memory  </li>
+                    <li>   9-axis intertial/ magnetometer sensor </li>
+                    <li>   Li-Ion or Li-Po battery 3.7v </li>
 
+                    <p>The wheelchair: the wheelchair available for testing does not have angled wheels, but the wheelchair that will be used in the final stages will be specially for wheelchair basketball and will have angled wheels.  </p>
+                    </td>
+                                  <td><p>• We will have the task of analysing gyroscope and accelerometer data</p>
+                    <p>•   The sensor will need to be attached to the wheelchair or the player</p>
+                    <p>•   Any sensor values will need to be offset in order to take into consideration the angle of the wheels.</p>
+                    </td>
+            </tr>
+            <tr>
+                  <th scope="row"></th>
+                  <td><b>Software</b>
+                    <p>In order to use the sensors our client initially proposed we use, we needed to use a pre-developed application to retrieve the data.</p>
+                    </td>
+                  <td>We will need to incorporate the pre-developed application to ours in order to retrieve and use the data </td>
+            </tr>
+            <tr>
+                  <th scope="row"></th>
+                  <td><b>Target Audience</b>
+                    <p>The application is intended for wheelchair basketball players.</p>
+                    </td>
+                  <td>At this point, we only knew the application would be used for wheelchair basketball users. From this, our next step is to speak to this client-base directly to refine more specific requirements about our end user </td>
+            </tr>
+                <tr>
+                  <th scope="row"></th>
+                  <td><b>Features</b>
+                    <p>The application should have a user interface that displays key statistics of a wheelchair basketball game.</p>
+                    </td>
+                  <td>Our client expects us to produce an application with a user interface that displays statistics. Our next step is to find the particular characteristics of the interface that would ensure it would suite our target audience. </td>
+            </tr>
+          </tbody>
+        </table>
 
+        <h3><strong> 2. Meeting with end user, a wheelchair basketball player</strong></h3>
+        <p> 
+            At this stage, we knew what software and hardware the project required but needed to gather more information to deduce the requirements for the end product. To do this, we arranged a meeting with Pete Donnelly, a wheelchair basketball player who is part of a team that trains in Brixton. We spoke with Pete and witnessed a training session to discover the following information. 
+        </p>
+        
+
+    <table class="table table-striped">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Information Gathered</th>
+              <th>Analysis of Information</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+                <td><b>Who the application is intended for</b>
+                    <li>relatively young 15-20 </li>
+                    <li>50/50% disabilities  </li>
+                    <li>not elite athletes </li>
+                    <li>all male at the moment but could potentially be for a female </li>
+                    <li>computer literate  </li>
+                    </td>
+                <td>
+                    <li>The target users cover a broad audience in terms of age, gender and ability, so any comparisons of statistics should not be done between different players. </li>
+                    <li>The users will not be elite athletes so the data doesn't have to be hugely precise. </li>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="container"><h4><strong>What the end product should include</strong></h4></div>
+        <p><b> Must:</b>
+                <li>provide heart rate data</li>
+                <li>monitor passes and shots</li>
+                <li>provide calories burnt</li>
+        </p>
+
+        <p><b> Could:</b>
+                <li>connect to a phone to get stats/ player profiles</li>
+                <li>collect the following data: distance travelled over four separate quarters, average speed, top speed</li>
+                <li> have an easy to use interface</li>
+                <li>have an option to pause data collection (for time-outs etc)</li>
+        </p>   
+
+        <h3><strong>1. Surveys</strong></h3>
+        <p> Our next step towards finalizing our requirements was to gather information through surveys.  The following questions were asked so we could find the most common answer amongst candidates and produce an application suitable for most wheelchair basketball players.  
+</p>
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Question</th>
+              <th>Analysis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+                <td>What type of phone/platform do you use?
+                    </td>
+                <td>Half of our candidates use android phones and the other half use iphones so we should make our application compatible on one and then the other. 
+                </td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+                <td>Would you be comfortable wearing a fitband during trainings and matches?
+                    </td>
+                <td>All said yes so this could be an option to attach the sensor. 
+                </td>
+            </tr>
+          </tbody>
+        </table>
     <footer class="footer-distributed">
 
 

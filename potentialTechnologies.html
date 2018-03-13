@@ -51,7 +51,6 @@
                             <li class="dropdown-submenu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Related Technologies</a>
                                 <ul class="dropdown-menu">
-
                                     <li><a href="potentialTechnologies.html">Potential Programming Languages, Libraries, APIs, Frameworks</a></li>
                                     <li><a href="potentialAlgorithms.html">Potential Algorithms</a></li>
                                 </ul>
@@ -113,13 +112,66 @@
 
     </nav>
     <div class="container text-center">
-        <h2><strong> Research</strong></h2>
-        <p> research</p>
-
-
+        <h2><strong> Potential Technologies</strong></h2>
     </div>
 
+    <div class="container-fluid">
+        <h3><u>Bespoke Java Application</u></h3>
+    </div>
 
+    <div class="container-fluid">
+        
+        <p>Originally, we were using a java application written by someone working with our client. From this, we intended to receive the data from the sensors and integrate it into an android application. However, attempting to implement this ran us into a number of problems. </p>
+
+        <p>First of all, the java application is only compatible with a 32 bit java virtual machine, which means a lot of configuration to get it to work. Despite best efforts, we only managed to get it working on a windows machine and not mac OS. This outdated technology would only lead to further problems down the line if another engineer were to take over our project. </p>
+
+        <p>Additionally, the legacy code has been developed in a way such that it is compatible with Android Developer Tools (ADT) and not Android Studio. However, ADT is no longer supported as of June 2015, and has many known bugs and potentially security bugs. To solve this issue, we attempted to make the java application compatible with Android Studio. However, we could not manage to integrate this on our devices. </p>
+
+        <p>It was finally decided that we would not be able to use the pre-written Java application for our application, so now we are using Android Studio to develop the user interface side of the application. </p>
+    </p>
+    </div>
+
+            <div class="container text-center">
+            <div class="col-sm-6">
+                <img src="img/success.png">
+                <li>Recieves data from gyroscope, accelerometer and magnometer: allows for a lot possibilities regarding interpretation of data</li>
+                <li>Could potentially be used with multiple sensors, meaning more data could provide more interesting statistics</li>
+
+            </div>
+            <div class="col-sm-6">
+                <img src="img/error.png">
+                <li>Legacy code has functionality issues</li>
+                <li>Uses unsupported Android Developer Tools</li>
+                <li>Uses 32 JVM as opposed to 64 bit</li>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <h3><u>Fitbit API</u></h3>
+    </div>
+
+    <div class="container-fluid">
+        
+        <p>With our initial task falling through, our client proposed we retrieve data from the Fitbit API an integrate this into our mobile application. The data is in the form of a json file and provides statistics such as calories, heart rate, average speed etc.</p>
+        <p>Although it is ideal that the data has already been analysed, this means we cannot analyse the raw data ourselves to find the specific statistics we wanted. As a result, we would only be able to collect general data rather than wheelchair specific data.</p>
+        <p>Additionally, the Fitbit API is designed for web applications, and it proved very difficult to integrate with a mobile application. In our given time frame that was reduced due to complications, it was not possible to complete this task. Instead, we created a json file generator to replicate the incoming data from the fitbit.</p>
+    </div>
+
+    <div class="container text-center">
+            <div class="col-sm-6">
+                <img src="img/success.png">
+                <li>Receives data that is already analysed</li>
+                <li>Data collected from a wristband that can be worn</li>
+            </div>
+
+            <div class="col-sm-6">
+                <img src="img/error.png">
+                <li>Designed for a web application, not easy to integrate with mobile phone app</li>
+                <li>Only provides broad statistics that aren't specific to wheelchair basketball</li>
+
+            </div>
+    </div>
+   
     <footer class="footer-distributed">
 
 

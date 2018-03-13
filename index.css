@@ -8,12 +8,63 @@ body {
     box-sizing: border-box;
 }
 
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+
+
+
 .fix-underline-a {
     height: 50px;
 }
 
 .v-header {
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     color: #fff;
@@ -23,13 +74,36 @@ body {
     max-width: 960px;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 2rem;
     margin: auto;
     text-align: center;
 }
 
+.container img {
+    max-height: 600px;
+    max-width: 550px; 
+}
+ 
+.container-fluid {
+    max-width: 1150px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    margin: auto;
+}
+
+.container-fluid img {
+    max-height: 700px;
+    max-width: 550px;
+    padding: 5rem;
+}
+
+.container-fluid u {
+    padding: 5rem;
+}
 .fullscreen-video-wrap {
     position: absolute;
-    top: 0;
+    top: 15%;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -57,11 +131,15 @@ body {
 
 .header-content {
     z-index: 2;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    transform: translate(-50%, -50%);
 }
 
 .header-content h1 {
     font-size: 50px;
-    margin-bottom: 0;
 }
 
 .header-content p {
@@ -98,13 +176,24 @@ body {
     margin-right: auto;
 }
 
+.col-sm-6 img {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.col-sm-6 li {
+    padding-top: 1rem;
+    text-align: left;
+}
+
 .member-image {
-    max-width: 75%;
+    max-width: 150px;
+    max-height: 150px;
     display: block;
-    border-radius: 2%;
     margin-left: auto;
     margin-right: auto;
     float: none !important;
+    border-radius: 50%;    
 }
 
 .navbar {
@@ -141,6 +230,21 @@ body {
     border-bottom: 3px solid #FFFFFF;
 }
 
+.navbar-inverse .navbar-nav .active-a a,
+.navbar-inverse .navbar-nav .active-a a:focus,
+.navbar-inverse .navbar-nav .active-a a:hover {
+    position: relative;
+    width: 100%;
+    left: 0;
+    color: #FFF;
+    background-color: transparent;
+    border: 0;
+    border-color: transparent;
+    bottom: -1px;
+    /*Change this to increase/decrease distance*/
+    border-bottom: 3px solid black;
+}
+
 .navbar-inverse .navbar-nav li a {
     color: #D5D5D5;
     border: 0;
@@ -161,6 +265,22 @@ body {
     /*Change this to increase/decrease distance*/
     border-bottom: 3px solid #FFFFFF;
 }
+
+.underlined-a {
+    position: relative;
+}
+
+.underlined-a:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom: -1px;
+    /*Change this to increase/decrease distance*/
+    border-bottom: 3px solid black;
+}
+
 
 .carousel-caption {
     top: 50%;
@@ -274,6 +394,8 @@ body {
 
     padding: 45px 50px;
     margin-top: 80px;
+    position:relative;
+
 }
 
 .footer-distributed .footer-left p {
@@ -318,6 +440,7 @@ body {
     margin-top: 6px;
     /*max-width: 180px;*/
 }
+
 
 .flag {
     margin-right: 3.3px;
@@ -409,3 +532,38 @@ footer{
     header { padding-top:40px; }
 }
 
+.flipcard {
+    position: relative;
+    width: 220px;
+    height: 160px;
+    perspective: 500px;
+  }
+  .flipcard.v:hover .front, .flipcard.v.flip .front{
+    transform: rotateX(180deg);
+  }
+  .flipcard.v:hover .back, .flipcard.v.flip .back{
+    transform: rotateX(0deg);
+  }
+  .flipcard.v .back{
+    transform: rotateX(-180deg);
+  }
+  .flipcard.h:hover .front, .flipcard.h.flip .front{
+    transform: rotateY(180deg);
+  }
+  .flipcard.h:hover .back, .flipcard.h.flip .back{
+    transform: rotateY(0deg);
+  }
+  .flipcard.h .back{
+    transform: rotateY(-180deg);
+  }
+  .flipcard .front, .flipcard .back
+  {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in;
+    /* color: white; */
+    /* padding: 10px; */
+    backface-visibility: hidden;
+  }

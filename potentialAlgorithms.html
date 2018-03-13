@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
 </head>
 
 <body>
@@ -51,7 +52,6 @@
                             <li class="dropdown-submenu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Related Technologies</a>
                                 <ul class="dropdown-menu">
-
                                     <li><a href="potentialTechnologies.html">Potential Programming Languages, Libraries, APIs, Frameworks</a></li>
                                     <li><a href="potentialAlgorithms.html">Potential Algorithms</a></li>
                                 </ul>
@@ -112,27 +112,109 @@
         </div>
 
     </nav>
-    <div class="container text-center">
-        <h2><strong> Research</strong></h2>
-        <p> research</p>
+    <div class="container">
+        <h2><strong> Potential Algorithms</strong></h2>
+    </div>
 
+    <div class="container-fluid">
+        <h3> <u>Algorithms: Inertial Measurement Unit (IMU)</u></h3>
+    </div>
+
+    <div class="container-fluid">
+        
+        <p>Originally our application was going to retrieve data from the bespoke ARCC sensors our client provided.  This data came in the form of accelerometer, gyroscope and magnetometer data. Although our project no longer requires the analysis of data in this form, our initial research gave us an introduction to the possible interpretations of data using a wheelchair, which helped us utilise the data from the fitbit API further down the line. For this reason, it is important to note the initial research we undertook.  </p>
+    </div>
+
+    <div class="container-fluid">
+
+        <h5><u><b>Speed = Distance / Time</b></u></h5>
+
+<p>We initially decided to work out the speed using the time and distance and started by reading research papers that had worked on similar projects using inertial measurement units. From this we followed suite, and intended to attach the sensor to the wheelchair and use the number of full rotations of the wheelchair to determine the distance travelled. </p>
+
+<p>At present, the application for the ARCC sensors uses UNIX Epock to provide the time as a unix time stamp, representing the seconds that have passed since Jan 1st 1970.  There is no need to convert the epoch time to digital time. Instead, we can work out the time simply by subtracting the final epoch from the starting epoch to get the seconds elapsed between the two periods of time.  </p>
+
+
+
+        <h5><u><b>Orientation Filter</b></u></h5>
+
+        <p>To find the distance travelled by the wheelchair, it is essential to first work out the orientation of the sensor by integrating the angular velocity from the gyroscope over time. Additionally, measurement errors from the gyroscope need to be eliminated or else errors will accumulate when the orientation is calculated. The algorithm we looked into calculates the orientation of the sensor around the pitch, or lateral, axis. The pitch axis has its origin at the center of gravity.</p>
+</div>
+
+
+
+    <div class="container text-center">
+                <p>The orientation filter provides a result in quaternion representation, a four-dimensional complex number to represent orientation of a rigid body in three-dimensional space. Quaternion arithmetic often requires that a quaternion describing an orientation is first normalised, so it is conventional for all quaternions to be of unit length. </p>
+
+        <div class="container text-center">
+            <div class="col-sm-6">
+                <img src="img/q.png">
+                <h5>This describes the orientation of frame B relative to frame A </h5>
+            </div>
+            <div class="col-sm-6">
+                <img src="img/r.png">
+                <h5>This represents a vector described in frame A</h5>
+        </div>
+    </div>
+
+            <div class="container-fluid">
+                <img src="img/v.png">
+                <h5>This is how the orientation of frame B relative to frame A is defined.</h5>
+                <h5>rx, ry and rz define the components of the unit vector x, y and z in frame A respectively.</h5>                
+        </div>
+
+            <div class="container-fluid">
+                <h4><strong><bold>1. The orientation described by A/Bq can be represented as the following rotation matrix:</bold></strong></h4> 
+                <img src="img/e.png">
+                               
+        </div>
+
+            <div class="container-fluid">
+                <h4><strong><bold>2. From here, the Euler angle representation can be defined by the following equations</bold></strong></h4> 
+                <img src="img/el.png">
+                               
+        </div>
+            <div class="container-fluid">
+                <h4><strong><bold>3. Given the angle, the next step is to simply calculate the distance by finding the size of the circumference of the wheel and multiplying this by the number of times the wheel rotates. However, this analysis describes a massively simplified set of steps and in reality we were unable to implement the algorithm with our knowledge.</bold></strong></h4> 
+                <img src="img/d.png">
+                               
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <h3><u>Algorithms: Fitbit</u></h3>
+    </div>
+
+    <div class="container-fluid">
+        
+        <p>A lot of the data from the fitbit API has already bee analysed and already provides us with statistics such as calories burnt, heart rate, distance, max speed and average speed.  However, we looked into interpreting this data to produce some interesting statistics. </p>
+    </div>
+
+    <div class="container-fluid">
+
+        <h5><u><b>1. Determining Periods of Exertion</b></u></h5>
+
+        <p>One algorithm we considered was the use of heart rate to find periods of exertion throughout the game. When the heart reaches over a certain percentage of the player’s resting heart rate for a set of period of time, it could be said they are experiencing a period of exertion.  </p>
+
+        <p>The positives of this algorithm are that it lets the player see how hard they exerted themselves throughout the game, and whether this decreased towards the end of a game, which implies their fitness is a factor affecting their game play.  </p>
+
+        <p>However, this could encourage vulnerably ill people to overexert themselves, which can lead to safety risks. </p>
+    </div>
+
+    <div class="container-fluid">
+
+        <h5><u><b>2. Calories burnt to determine whether user is in 'weightloss' zone</b></u></h5>
+
+        <p>Another algorithm taken into consideration was an algorithm to determine whether the player is in a calories deficit. To do this, we would take the user’s weight and height to find their estimated resting metabolic rate. The metabolic rate could be divided by the average wake hours to find the estimated calories the player would play in a set time. Then we could compare how many calories the player actually burnt in that period. If the player is in deficit calories, the algorithm would determine that they are in weight loss period.</p>
+
+        <p>This algorithm has positives in that it can help a player maintiain or lose weight if that is their health goal. However, it uses a lot of estimations and therefore may not be entirely accurate. Additionally, a calorie deficit works over a day period rather than the length of a basketball game or training, making a marked ‘weightloss period’ redundant if the player spends the rest of the day in surplus calories. </p>
 
     </div>
 
-
-    <footer class="footer-distributed">
-
-
-        <div class="footer-left">
-            <p>
-                
-                COMP214P Systems Engineering - Team 31
-            </p>
-        </div>
-
     </footer>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
