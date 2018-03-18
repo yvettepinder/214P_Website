@@ -14,7 +14,7 @@
 
 <body>
     <!-- Add later navbar-fixed-ontop -->
-    <nav class="navbar transparent" >
+<nav class="navbar transparent navbar-inverse" >
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -22,102 +22,211 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               
             </div>
-         <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html"><font color = "black">HOME</font></a></li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font color = "black">REQUIREMENTS</font><b class="caret"></b></a>
-                        <ul class="dropdown-menu multi-level">
-                            <li><a href="requirements.html">Intro and Goals</a></li>
-                            <li class="dropdown-submenu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gathering Requirements</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="clientMeeting.html">1. First Meeting with Client</a></li>
-                                    <li><a href="meetingEndUser.html">2. Meeting with End User</a></li>
-                                    <li><a href="surveys.html">3. Surveys</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="persona.html"><font color = "black">Persona</font></a></li>
-                            <li><a href="storyboards.html"><font color = "black">Storyboards</font></a></li>
-                            <li><a href="moscow.html"><font color = "black">MoSCoW Requirements</font></a></li>
-                            <li><a href="userCases.html"><font color = "black">User Cases</font></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font color = "black">RESEARCH</font><b class="caret"></b></a>
-                        <ul class="dropdown-menu multi-level">
-                            <li class="dropdown-submenu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Related Technologies</a>
-                                <ul class="dropdown-menu">
-
-                                    <li><a href="potentialTechnologies.html">Potential Programming Languages, Libraries, APIs, Frameworks</a></li>
-                                    <li><a href="potentialAlgorithms.html">Potential Algorithms</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="summaryResearch.html"><font color = "black">Summary</font></a></li>
-                            <li><a href="references.html"><font color = "black">References</font></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font color = "black">HCI</font><b class="caret"></b></a>
-                        <ul class="dropdown-menu multi-level">
-                            <li><a href="sketches.html"><font color = "black">Sketches</font></a></li>
-                            <li><a href="wireframes.html"><font color = "black">Wireframes</font></a></li>
-                            <li><a href="prototypes.html"><font color = "black">Prototype</font></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font color = "black">DESIGN</font><b class="caret"></b></a>
-                        <ul class="dropdown-menu multi-level">
-                            <li><a href="systemArchitecture.html"><font color = "black">System Architecture</font></a></li>
-                            <li><a href="classDiagrams.html"><font color = "black">Class Diagram</font></a></li>
-                            <li><a href="sequenceDiagrams.html"><font color = "black">Sequence Diagram</font></a></li>
-                            <li><a href="designPatterns.html"><font color = "black">Design Pattern</font></a></li>
-                            <li><a href="dataStorage.html"><font color = "black">Data Storage</font></a></li>
-                            <li><a href="implementation.html"><font color = "black">Implementation of Key Functionalities</font></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font color = "black">TESTING</font><b class="caret"></b></a>
-                        <ul class="dropdown-menu multi-level">
-                            <li><a href="testingStrategies.html"><font color = "black">Test Strategies</font></a></li>
-                            <li><a href="unitTesting.html"><font color = "black">Unit and Integration Testing</font></a></li>
-                            <li><a href="acceptance.html"><font color = "black">Acceptance Testing</font></a></li>
-                            <li><a href="compatability.html"><font color = "black">Compatability Testing</font></a></li>
-                            <li><a href="interface.html"><font color = "black">User Interface Testing</font></a></li>
-                            <li><a href="security.html"><font color = "black">Security Testing</font></a></li>
-                            <li><a href="regression.html"><font color = "black">Regression Testing</font></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font color = "black">EVALUATION</font><b class="caret"></b></a>
-                        <ul class="dropdown-menu multi-level">
-                            <li><a href="summaryAchievements.html"><font color = "black">Summary of Achievements</font></a></li>
-                            <li><a href="criticalEvaluation.html"><font color = "black">Critical Evaluation of Product</font></a></li>
-                            <li><a href="futureWork.html"><font color = "black">Future Work</font></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font color = "black">MANAGEMENT</font><b class="caret"></b></a>
-                        <ul class="dropdown-menu multi-level">
-                            <li><a href="userManual.html"><font color = "black">User Manual</font></a></li>
-                            <li><a href="deploymentManual.html"><font color = "black">Deployment Manual</font></a></li>
-                            <li><a href="gantt.html"><font color = "black">Gantt Chart</font></a></li>
-                        </ul>
-                    </li>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="underlined active"><a href="index.html" class="fix-underline-a"><font color="black">HOME</font></a></li>
+                    <li class="underlined"><a href="requirements.html"><font color="black">REQUIREMENTS</font></a></li>
+                    <li class="underlined"><a href="research.html"><font color="black">RESEARCH</font></a></li>
+                    <li class="underlined"><a href="hci.html"><font color="black">HCI</font></a></li>
+                    <li class="underlined"><a href="design.html"><font color="black">DESIGN</font></a></li>
+                    <li class="underlined"><a href="testing.html"><font color="black">TESTING</font></a></li>
+                    <li class="underlined"><a href="evaluation.html"><font color="black">EVALUATION</font></a></li>
+                    <li class="underlined"><a href="management.html"><font color="black">MANAGEMENT</font></a></li>
                 </ul>
             </div>
         </div>
-
     </nav>
-    <div class="container text-center">
-        <h2><strong> Research</strong></h2>
-        <p> research</p>
+
+ <div class="container">
+    <div class="row">
+        <div id="my=nav" class ="span3">
+            <ul class="nav nav-list affix">
+                <li><a href="#section1">Potential Technologies</a></li>
+                <li><a href="#section2">Potential Algorithms</a></li>
+                <li><a href="#section3">Summary</a></li>
+                <li><a href="#section4">References</a></li>
+
+            </ul>
+        </div>
+        <div class="span9 my-content">
+            <section id="section1"> 
+                    <div class="container text-center">
+                        <h2><strong> Potential Technologies</strong></h2>
+                    </div>
+
+                    <div class="container-fluid">
+                        <h3><u>Bespoke Java Application</u></h3>
+                    </div>
+
+                    <div class="container-fluid">
+                        
+                        <p>Originally, we were using a java application written by someone working with our client. From this, we intended to receive the data from the sensors and integrate it into an android application. However, attempting to implement this ran us into a number of problems. </p>
+
+                        <p>First of all, the java application is only compatible with a 32 bit java virtual machine, which means a lot of configuration to get it to work. Despite best efforts, we only managed to get it working on a windows machine and not mac OS. This outdated technology would only lead to further problems down the line if another engineer were to take over our project. </p>
+
+                        <p>Additionally, the legacy code has been developed in a way such that it is compatible with Android Developer Tools (ADT) and not Android Studio. However, ADT is no longer supported as of June 2015, and has many known bugs and potentially security risks. To solve this issue, we attempted to make the java application compatible with Android Studio. However, we could not manage to integrate this on our devices. </p>
+
+                        <p>It was finally decided that we would not be able to use the pre-written Java application for our application, so now we are using Android Studio to develop the user interface side of the application. </p>
+                    </div>
+                    <div class="container text-center">
+                    <div class="col-sm-6">
+                        <img src="img/success.png">
+                        <li>Recieves data from gyroscope, accelerometer and magnometer: allows for a lot of possibilities regarding interpretation of data</li>
+                        <li>Could potentially be used with multiple sensors, meaning more data could provide more interesting statistics</li>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="img/error.png">
+                        <li>Legacy code has functionality issues</li>
+                        <li>Uses unsupported Android Developer Tools</li>
+                        <li>Uses 32 bit JVM as opposed to 64 bit</li>
+                     </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <h3><u>Fitbit API [1] </u></h3>
+                    </div>
+
+                    <div class="container-fluid">
+                        
+                        <p>With our initial task falling through, our client proposed we retrieve data from the Fitbit API and integrate this into our mobile application. The data is in the form of a json file and provides statistics such as calories, heart rate, average speed etc.</p>
+                        <p>Although it is ideal that the data has already been analysed, this means we cannot analyse the raw data ourselves to find the specific statistics we wanted. As a result, we would only be able to collect general data rather than wheelchair specific data.</p>
+                        <p>Additionally, the Fitbit API is designed for web applications, and it proved very difficult to integrate with a mobile application. In our given time frame that was reduced due to complications, it was not possible to complete this task. Instead, we created a json file generator to replicate the incoming data from the fitbit.</p>
+                    </div>
+
+                    <div class="container text-center">
+                            <div class="col-sm-6">
+                                <img src="img/success.png">
+                                <li>Receives data that is already analysed</li>
+                                <li>Data collected from a wristband that can be worn</li>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <img src="img/error.png">
+                                <li>Designed for a web application, not easy to integrate with mobile phone app</li>
+                                <li>Only provides broad statistics that aren't specific to wheelchair basketball</li>
+
+                            </div>
+                    </div>
+            </section>
+
+    <section id="section2">
+                <div class="container">
+                    <h2><strong> Potential Algorithms</strong></h2>
+                </div>
+
+                <div class="container-fluid">
+                    <h3> <u>Algorithms: Inertial Measurement Unit (IMU) [2]</u></h3>
+                </div>
+
+                <div class="container-fluid">
+                    
+                    <p>Originally our application was going to retrieve data from the bespoke ARCC sensors our client provided.  This data came in the form of accelerometer, gyroscope and magnetometer data. Although our project no longer requires the analysis of data in this form, our initial research gave us an introduction to the possible interpretations of data using a wheelchair, which helped us utilise the data from the fitbit API further down the line. For this reason, it is important to note the initial research we undertook.  </p>
+                </div>
+
+                <div class="container-fluid">
+
+                    <h5><u><b>Speed = Distance / Time</b></u></h5>
+
+            <p>We initially decided to work out the speed using the time and distance and started by reading research papers that had worked on similar projects using inertial measurement units. From this we followed suite, and intended to attach the sensor to the wheelchair and use the number of full rotations of the wheelchair to determine the distance travelled. </p>
+
+            <p>At present, the application for the ARCC sensors uses UNIX Epock to provide the time as a unix time stamp, representing the seconds that have passed since Jan 1st 1970.  There is no need to convert the epoch time to digital time. Instead, we can work out the time simply by subtracting the final epoch from the starting epoch to get the seconds elapsed between the two periods of time.  </p>
 
 
-    </div>
+
+                    <h5><u><b>Orientation Filter</b></u></h5>
+
+                    <p>To find the distance travelled by the wheelchair, it is essential to first work out the orientation of the sensor by integrating the angular velocity from the gyroscope over time. Additionally, measurement errors from the gyroscope need to be eliminated or else errors will accumulate when the orientation is calculated. The algorithm we looked into calculates the orientation of the sensor around the pitch, or lateral, axis. The pitch axis has its origin at the center of gravity.</p>
+            </div>
+
+
+
+                <div class="container text-center">
+                        <p>The orientation filter provides a result in quaternion representation, a four-dimensional complex number to represent orientation of a rigid body in three-dimensional space. Quaternion arithmetic often requires that a quaternion describing an orientation is first normalised, so it is conventional for all quaternions to be of unit length. </p>
+                </div>
+
+                <div class="container text-center">
+                    <div class="col-sm-6">
+                        <img src="img/q.png">
+                        <h5>This describes the orientation of frame B relative to frame A </h5>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="img/r.png">
+                        <h5>This represents a vector described in frame A</h5>
+                    </div>
+                </div>
+
+                    <div class="container-fluid">
+                        <img src="img/v.png">
+                        <h5>This is how the orientation of frame B relative to frame A is defined.</h5>
+                        <h5>rx, ry and rz define the components of the unit vector x, y and z in frame A respectively.</h5>                
+                </div>
+
+                    <div class="container-fluid">
+                        <h4><strong><bold>1. The orientation described by A/Bq can be represented as the following rotation matrix:</bold></strong></h4> 
+                        <img src="img/e.png">
+                                       
+                </div>
+
+                    <div class="container-fluid">
+                        <h4><strong><bold>2. From here, the Euler angle representation can be defined by the following equations</bold></strong></h4> 
+                        <img src="img/el.png">
+                                       
+                </div>
+                    <div class="container-fluid">
+                        <h4><strong><bold>3. Given the angle, the next step is to simply calculate the distance by finding the size of the circumference of the wheel and multiplying this by the number of times the wheel rotates. However, this analysis describes a massively simplified set of steps and in reality we were unable to implement the algorithm with our knowledge.</bold></strong></h4> 
+                        
+                                       
+                </div>
+
+            <div class="container-fluid">
+                <h3><u>Algorithms: Fitbit</u></h3>
+            </div>
+
+            <div class="container-fluid">
+                
+                <p>A lot of the data from the fitbit API has already bee analysed and already provides us with statistics such as calories burnt, heart rate, distance, max speed and average speed.  However, we looked into interpreting this data to produce some interesting statistics. </p>
+            </div>
+
+            <div class="container-fluid">
+
+                <h5><u><b>1. Determining Periods of Exertion</b></u></h5>
+
+                <p>One algorithm we considered was the use of heart rate to find periods of exertion throughout the game. When the heart reaches over a certain percentage of the player’s resting heart rate for a set of period of time, it could be said they are experiencing a period of exertion.  </p>
+
+                <p>The positives of this algorithm are that it lets the player see how hard they exerted themselves throughout the game, and whether this decreased towards the end of a game, which implies their fitness is a factor affecting their game play.  </p>
+
+                <p>However, this could encourage vulnerably ill people to overexert themselves, which can lead to safety risks. </p>
+            </div>
+
+            <div class="container-fluid">
+
+                <h5><u><b>2. Calories burnt to determine whether user is in 'weightloss' zone</b></u></h5>
+
+                <p>Another algorithm taken into consideration was an algorithm to determine whether the player is in a calories deficit. To do this, we would take the user’s weight and height to find their estimated resting metabolic rate. The metabolic rate could be divided by the average wake hours to find the estimated calories the player would play in a set time. Then we could compare how many calories the player actually burnt in that period. If the player is in deficit calories, the algorithm would determine that they are in weight loss period.</p>
+
+                <p>This algorithm has positives in that it can help a player maintiain or lose weight if that is their health goal. However, it uses a lot of estimations and therefore may not be entirely accurate. Additionally, a calorie deficit works over a day period rather than the length of a basketball game or training, making a marked ‘weightloss period’ redundant if the player spends the rest of the day in surplus calories. </p>
+
+
+            </section>
+            <section id="section3"> 
+                    <div class="container text-center">
+                        <h2><strong> Summary</strong></h2>
+                    </div>
+            </section>    
+            <section id="section4"> 
+                    <div class="container text-center">
+                        <h2><strong> References</strong></h2>
+                    </div>
+                    <p>[1] https://www.fitbit.com/dev/dev</br>
+                        [2] http://x-io.co.uk/open-source-imu-and-ahrs-algorithms</p>
+            </section>         
+</div>
+</div>
+</div>
+
+
 
 
     <footer class="footer-distributed">
