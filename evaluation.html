@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wheelchair Basketball Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Add later navbar-fixed-ontop -->
+<nav class="navbar transparent navbar-inverse" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="underlined active"><a href="index.html" class="fix-underline-a"><font color="black">HOME</font></a></li>
+                    <li class="underlined"><a href="requirements.html"><font color="black">REQUIREMENTS</font></a></li>
+                    <li class="underlined"><a href="research.html"><font color="black">RESEARCH</font></a></li>
+                    <li class="underlined"><a href="hci.html"><font color="black">HCI</font></a></li>
+                    <li class="underlined"><a href="design.html"><font color="black">DESIGN</font></a></li>
+                    <li class="underlined"><a href="testing.html"><font color="black">TESTING</font></a></li>
+                    <li class="underlined"><a href="evaluation.html"><font color="black">EVALUATION</font></a></li>
+                    <li class="underlined"><a href="management.html"><font color="black">MANAGEMENT</font></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+ <div class="container">
+    <div class="row">
+        <div id="my=nav" class ="span3">
+            <ul class="nav nav-list affix">
+                <li><a href="#section1">Summary of Achievements</a></li>
+                <li><a href="#section2">Critical Evaluation of Project</a></li>
+                <li><a href="#section3">Future Work</a></li>
+            </ul>
+        </div>
+        <div class="span9 my-content">
+            <section id="section1"> 
+                 <div class="container text-center">
+                        <h2><strong> Summary of Achievements</strong></h2>
+                    </div>
+
+                    <div class="container-fluid">
+                        <h3> MoSCoW Requirements </h3>
+                    </div>
+                    <div class="container-fluid">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Requirement</th>
+                          <th>Priority</th>
+                          <th>Feature</th>
+                          <th>Progress</th>
+                          <th>Contributors</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row"></th>
+                            <td><b>The system must allow the user to log into their own account</b></td>
+                            <td>Must</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>The system must be compatible with iOS or Android</b></td>
+                            <td>Must</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>The system must be able to link to a FitBit account</b></td>
+                            <td>Must</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>The system must retrieve data from the Fitbit</b></td>
+                            <td>Must</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>The system must have the option for the user to add a game</b></td>
+                            <td>Must</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>The system must display game data</b></td>
+                            <td>Must</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td><b>The system must display disclaimers, copyrights and information of the application</b></td>
+                            <td>Must</td>
+                            <td>Non-functional</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>The system should have a search functionality</b></td>
+                            <td>Should</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>The system should be compatible with iOS and Android</b></td>
+                            <td>Should</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>The system should allow the user to track their weight</b></td>
+                            <td>Should</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>The system should calculate average speed</b></td>
+                            <td>Should</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>The system should calculate average calories burnt, distance travelled, speed, active minutes across games</b></td>
+                            <td>Should</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>The system should show the averages of statistics between set time frames</b></td>
+                            <td>Should</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                              <td><b>The system could allow the coach to share results of a player from a game</b></td>
+                            <td>Could</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                              <td><b>The system could allow the player to share his results from a game</b></td>
+                            <td>Could</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                              <td><b>The system could display the analysis using graphs, charts and other data visualisations.</b></td>
+                            <td>Could</td>
+                            <td>Non-Functional</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                              <td><b>The system could use Firebase for data storage</b></td>
+                            <td>Could</td>
+                            <td>Functional</td>
+                        <tr>
+                            <th scope="row"></th>
+                              <td><b>The system could allow the user to view his best game in a month</b></td>
+                            <td>Could</td>
+                            <td>Functional</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                              <td><b>The system won't have a user interface on the band</b></td>
+                            <td>Won't</td>
+                            <td>Functional</td>
+                        </tr>
+                            <th scope="row"></th>
+                              <td><b>The system won't produce real time statistics (analysis of data will happen at the end of the match)</b></td>
+                            <td>Won't</td>
+                            <td>Functional</td>
+                        </tr>
+                            <th scope="row"></th>
+                              <td><b>The system won't have the option for the players to start, stop and pause from taking data from the sensors</b></td>
+                            <td>Won't</td>
+                            <td>Functional</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </div>
+
+                 <div class="container-fluid">
+                        <h3>Known Bugs</h3>
+                </div>
+
+            <div class="container-fluid">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Bug Description</th>
+                          <th>Priority</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row"></th>
+                            <td><b></b></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                          <th scope="row"></th>
+                            <td><b></b></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                          <th scope="row"></th>
+                            <td><b></b></td>
+                            <td> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </div>
+
+                 <div class="container-fluid">
+                        <h3>Individual Contribution</h3>
+                </div>
+                <div class="container-fluid">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Work Packages</th>
+                          <th>Sebi</th>
+                          <th>Christian</th>
+                          <th>Yvette</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row"></th>
+                            <td><b>Client Liaison</b></td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>Research</b></td>
+                            <td>34</td>
+                            <td>33</td>
+                            <td>33</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>UI Design</b></td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>Front End Development</b></td>
+                            <td>0</td>
+                            <td>100</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>Back End Development</b></td>
+                            <td>100</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>Testing</b></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>Bi-weekly Report</b></td>
+                            <td>100</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td><b>Website Editing</b></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>Video Editing</b></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>User Manual</b></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                              <td><b>Deployment Manual</b></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                         <tr>
+                              <th scope="row"></th>
+                              <td><b>Overall Contribution</b></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>                      
+                      </tbody>
+                    </table>
+
+                  </div>
+
+            </section>
+            <section id="section2"> 
+
+                 <div class="container text-center">
+                        <h2><strong> Critical Evaluation of Project</strong></h2>
+                    </div>
+
+                <div class="container-fluid">
+                        <h3>User Interface</h3>
+                </div>
+                <div class="container-fluid">
+                        <h3>Functionality</h3>
+                    </div>
+                <div class="container-fluid">
+                        <h3>Stability</h3>
+                </div>
+                <div class="container-fluid">
+                        <h3>Efficiency</h3>
+                </div>
+                <div class="container-fluid">
+                        <h3>Compatibility</h3>
+                        <p>At present, our application is only compatible on Android devices. In terms of our requirements, this fulfills the 'must have' that the application must compatible on either Android <b>or</b> iOS. This was decided as the result from our surveys showed half of the current potential end users use iOS devices and half of them use Android devices. </p>
+                        <p>However, this discounts half of our end users and therefore has a 'should have' requirement we decided the application should be compatible on both types of devices. Given the limited time frame we had, this was not possible, but will definitely be a next step for further development of the application.</p>
+                </div>
+                <div class="container-fluid">
+                        <h3>Maintainability</h3>
+                </div>
+                <div class="container-fluid">
+                        <h3>Project Management</h3>
+                        <p>Our team was tested throughout the development process due to many unexpected issues and resulting changes. For this reason, it was a difficult task to maintain the management of our project and despite the difficulties we faced, we managed to keep up with each change by recognising each team member's strengths and dividing the tasks accordingly. </p>
+                        <p>Although a lot of our development process was spent not knowing what our client wanted, we all took the time to research different technologies and data analysis techniques so that we would have the knowledge to take on what our client wanted from us. </p>
+                        <p>What we have learnt from the way we approached project management is to get a clear set of requirements from our client from the beginning, and not allow them to change these requirements throughout the process. In this way, we will have a consistent targets throughout, and will not make the task harder for ourselves. </p>
+                </div>
+            </section>    
+            <section id="section3">
+                   <div class="container text-center">
+                        <h2><strong> Future Work</strong></h2>
+                    </div>
+
+
+            </section>        
+</div>
+</div>
+</div>
+
+
+
+
+    <footer class="footer-distributed">
+
+
+        <div class="footer-left">
+            <p>
+                
+                COMP214P Systems Engineering - Team 31
+            </p>
+        </div>
+
+    </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
