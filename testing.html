@@ -25,7 +25,6 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                                 <ul class="nav navbar-nav navbar-left">
-                    <a><font color="black"> Team 31 - Wheelchair Basketball Project</font></a>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="underlined active"><a href="index.html" class="fix-underline-a"><font color="black">HOME</font></a></li>
@@ -293,16 +292,22 @@
     <section id="section2">
                     <div class="container text-center">
                         <h2><strong> Unit Testing</strong></h2>
+
+                        <p> Unit testing is a method of testing that test a small functionality of the code to differentiate between working and problematic code. In this way, it is easy to change code that uses unit testing, as the developer can see which parts of the code are not working. </p>
                         
-                        <p>As part of the unit testing for our Android application, we are developing local unit tests that can run on the JVM. These tests run much faster than the time required to deploy and run tests on an Android device, and ensure stability of each section within the whole application.</p>
+                        <p>As part of the unit testing for our Android application, we have developed local unit tests that can run on the JVM. These tests run much faster than the time required to deploy and run tests on an Android device, and ensure stability of each section within the whole application.</p>
 
-                        <p>For our unit tests, we have created a sample json file, as this is the form in which data will come from the fitbit API. The first task is to retrieve data from the json file and convert it to a string. From there, our unit tests take the string and interprets it as an array. This allows us to retrieve individual objects from the file. </p>
+
+                        <p>For our unit tests, we have created a sample json file using our json file generator, as this is the form in which data will come from the fitbit API. The first task is to retrieve data from the json file and convert it to a string. From there, our unit tests take the string and interprets it as an array. This is done in our data controller class. From there we can simply create an instance of this controller in our unit testing file in order to retrieve the data.</p>
+
+                        <img src="img/getData.png">
+
+                        <p>For our unit tests, we have used JUnit, which is compatible in Android Studio. We have used the tests for the backend to check each piece of data is in the correct format. For example:</p>
+
+                        <img src="img/unitTests.png">
+                         
                 </div>
-                <div class="container text-center">
 
-                <p>The first two tests check that the data is in the correct form; it checks that all times are strings and all heart rates are integers. The next test ensures each element refers to the correct data. More specifically, we are checking that each time is mapped to the correct heart rate. 
-                 </p>
-                    </div>
             </section>  
             <section id="section3"> 
                     <div class="container">
@@ -315,27 +320,19 @@
                         <h3><strong>1. Learnability</strong></h3>
     
                         <p>Learnability refers to how easy it is for users to accomplish basic tasks the first time they encounter the design. As part of our test for learnbility, we asked our client to use the application with no prior instruction as to how it works. Our application only has few buttons and each button is labeled. For this reason the app needs no further instruction set and there for is very learnable. </p>
-                    </div>
- 
-                    <div class="container text-center">
+
                         <h3><strong>2. Efficiency</strong></h3>
   
                         <p>Our next point to take into consideration for usability testing is the efficiency of the application.Following review, we noticed that this is something that could be improved about our application. To navigate through the application, the user has to click on a number of consecutive buttons, and there is no easy go-to menu. For this reason it can take a long time for the user to find the information they want.  </p>
-                    </div>
 
-                    <div class="container">
                         <h3><strong>3. Memorability</strong></h3>
     
                         <p>Memorability refers to how easy it is for the user to use the application after perhaps not using it for some time. However, our application is so simplistic that this links to learnability; the app is very easy to use without need of further instruction and therefore a user should not forget, or will not need to remember, how to use the application.   </p>
-                    </div>
 
-                 <div class="container">
                         <h3><strong>4. Errors</strong></h3>
     
                         <p>We could consider an error from the user an incorrect button pressed, as the application is for the display of data rather than modification from the user, Although this is not troublesome in terms of severity affecting the functionality of the app, it may be frustrating for the user to navigate back to where they were in the application, as this was already identified as an issue regarding efficiency. </p>
-                    </div>
 
-                 <div class="container">
                         <h3><strong>5. Satisfaction</strong></h3>
    
                         <p>Satisfaction refers to how much the user likes using the program. For those who value simplicity, the application is enjoyable to navigate and use. However, the application could be made more aesthetically pleasing with more colours, images and interactive features. </p>
@@ -348,8 +345,11 @@
                     <div class="container">
                         <h2><strong> UI Testing</strong></h2>
 
-                        <p>One approach we initially considered to test our user interface was to manually perform a set of user operations on our application and verify that is is behaving correctly. However, this can be time-consuming, tedious and error-prone. Instead, we decided to write automated UI tests to perform the operations, allowing us to run our tests quickly and reliably in a repeatable manner. </p>
-                        <p>To perform the automated tests on our application in Android Studio, we used the testing framework Espresso.</p>
+                        <p>The approach we initially considered to test our user interface was to manually perform a set of user operations on our application and verify that is is behaving correctly.</p>
+                        <p>To do this, we considered all the possible use cases and ways of navigating through the application. Following each input (either an actual input or physical input such as pressing a button), we verified that the outcome was expected. By this we mean either the application took us to the correct page or the input we manually entered was then displayed correctly.</p>
+
+                        <p> At present, this method is fine for our application because it is simple and does not have many featuries. However, this can be time-consuming, tedious and error-prone with further development of the app. For our next stage of UI testing, we wll to write automated UI tests to perform the operations, allowing us to run our tests quickly and reliably in a repeatable manner. </p>
+                        <p>To perform the automated tests on our application in Android Studio, we will use the testing framework Espresso, which allows you to programmatically simulate user actions and test complex intra-app user interactions.</p>
                     </div>
             </section>  
 </div>

@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wheelchair Basketball Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Add later navbar-fixed-ontop -->
+<nav class="navbar transparent navbar-inverse" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                                <ul class="nav navbar-nav navbar-left">
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="underlined active"><a href="index.html" class="fix-underline-a"><font color="black">HOME</font></a></li>
+                    <li class="underlined"><a href="requirements.html"><font color="black">REQUIREMENTS</font></a></li>
+                    <li class="underlined"><a href="research.html"><font color="black">RESEARCH</font></a></li>
+                    <li class="underlined"><a href="hci.html"><font color="black">HCI</font></a></li>
+                    <li class="underlined"><a href="design.html"><font color="black">DESIGN</font></a></li>
+                    <li class="underlined"><a href="testing.html"><font color="black">TESTING</font></a></li>
+                    <li class="underlined"><a href="evaluation.html"><font color="black">EVALUATION</font></a></li>
+                    <li class="underlined"><a href="management.html"><font color="black">MANAGEMENT</font></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+ <div class="container">
+    <div class="row">
+        <div id="my=nav" class ="span3">
+            <ul class="nav nav-list affix">
+                <li><a href="#section1">User Manual</a></li>
+                <li><a href="#section2">Deployment Manual</a></li>
+                <li><a href="#section3">Gantt Chart</a></li>
+
+            </ul>
+        </div>
+        <div class="span9 my-content">
+
+    <section id="section1">
+                    <div class="container text-center">
+                        <h2><strong> User Manual</strong></h2>
+                        <p>GameOn! is a mobile application to view analysis of a wheelchair basketball training session. The application allows you to view your statistics for each training session in addition to your average results over a number of games. This data is displayed on a graph for easier comparison. The following manual will run you through how to use the application. </p>
+                        <h3>Logging in</h3>
+                        <p>When the application is initially launched, the following welcome page will be displayed. In order to log in, select the option to continue with Facebook. This will take you to a page where you should enter your account details. After entering your details, press continue and you will be redirected back to the app and will now be signed in. </p>
+                        <div class="container text-center">
+                            <div class="col-sm-6">
+                                <img src="img/1m.png">
+                            </div>
+
+                            <div class="col-sm-6">
+                                <img src="img/2m.png">
+                            </div>
+                         </div>
+                         <h3>Adding Training Sessions</h3>
+                         <p>After logging in, you will be taken to the main dashboard. The first time you use the application, this will obviously be empty as you will not have entered any sessions yet. In order to add a training session, select the 'View Training Session' button from the main dashboard, then press the circular button on the bottom right hand corner. This will take you to the screen where you can enter the details of the training session. Pressing 'Create Session' will complete the process, and the session will be added to your list of training sessions. </p>
+                         <p>After adding a training session, the main dashboard will be updated and contain information about the training session. The graph displays the data for a specific statistic for each session. As you add more sessions, you will see these added the graph, colour coded according to the session. </p>
+                         <p>To change the statistic being displayed, horizontally scroll through the icons and press on one to select it.</p>
+                         <h3>Navigating</h3>
+                         <p>To navigate through the application, press the icon in the top left corner. This will open the navigation bar where you can select what page you would like to visit.</p>
+
+
+
+                         
+                </div>
+
+            </section>  
+            <section id="section2"> 
+                    <div class="container">
+                        <h2><strong> Deployment Manual</strong></h2>
+                        <p>We used Android Studio for the entire process of development so that in the end the project could be easily installed on any phone running one of the latest versions of Android. This being said, once one has the source code and Android Studio installed on a computer, these are the following steps to have everything up and running: </p>
+                        <h3>Prerequisites</h3>
+                        <li>Android Studio</li>
+                        <li>Source Code</li>
+                        <li>Android SDK</li>
+                        <li>Android Device</li>
+                    </div>
+                    <div class="container">
+                        <p><b>Step 1. </b> Open Android Studio. The following window should appear:</p>
+                        <img src="img/1d.png">
+                    </div>
+                    
+                    <div class="container">
+                        <p><b>Step 2. </b> Click on "Open an existing Android Studio Project". From there navigate to the directory of the source code and click on it, then open.</p>
+                    </div>
+
+                    <div class="container">
+                        <p><b>Step 3. </b> Wait a couple of seconds for Android Studio to import all the necessary modules. After that, click on the green triangle pointing to the right (the Run button). This will build and run the application on an emulator or a connect device.</p>
+                        <img src="img/4d.png">
+                    </div>
+                    
+                    <div class="container">
+                        <p><b>Step 4. </b> Choose the device you want to deploy the application on. </p>
+                        <img src="img/4d.png">
+                    </div>
+                    <div class="container">
+                        <p><b>Step 5. </b> You are all set. Enjoy using your application.</p>
+                        <img src="img/5d.png">
+                    </div>
+
+                    <div class="container">
+                        <p><b>(Additional) Step. </b> We alternatively have an APK file for our application which can be downloaded directly from an android device to run the application instantly without Android Studio.</p>
+                    </div>
+
+                    
+
+            </section>    
+
+            <section id="section3"> 
+                    <div class="container">
+                        <h2><strong> Gantt Chart</strong></h2>
+                    </div>
+                    <div class="container">
+                        <img src="img/gantt.png" style="width:800px;height:300px;">
+                    </div>
+            </section>  
+</div>
+</div>
+</div>
+
+
+
+
+    <footer class="footer-distributed">
+
+
+        <div class="footer-left">
+            <p>
+                
+                COMP214P Systems Engineering - Team 31
+            </p>
+        </div>
+
+    </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -55,14 +55,23 @@
             <section id="section1"> 
                 <div class="container">
                     <h2><strong> Requirements</strong></h2>
+                  </div>
+                  <div class="container">
                     <h5><strong> Introduction to project background and client</strong></h5>
-                    <p> Our client is Catherine Holloway, a senior lecturer in the Department of Computer Science based in the UCL Interaction Centre. Catherine’s work is focused on the design of assistive technologies; she is currently working on a project called Power-Up!, which looks to design new power sources and interfaces for assistive technologies. 
+                    <p> At the beginning of our project, our client was Catherine Holloway. Catherine is a senior lecturer in the Department of Computer Science based in the UCL Interaction Centre. Catherine’s work is focused on the design of assistive technologies; she is currently working on a project called Power-Up!, which looks to design new power sources and interfaces for assistive technologies. </p>
 
-                    Our project stems from Catherine’s idea to help people with disabilities; the concept is to develop an activity tracker relevant to a specific sport, i.e. wheelchair basketball, to help wheelchair-bound people track their statistics during a game and also monitor their overall health. 
+                    <p>Our project stemmed from Catherine’s idea to help people with disabilities; the initial concept was to develop an activity tracker relevant to a specific sport, i.e. wheelchair basketball, to help wheelchair-bound people track their statistics during a game and also monitor their overall health. 
                     </p>
+
+                    <p>However, due to unforeseen circumstances, our project and client changed. From this point, our client was Dr, Dean Mohamedally, a Principal Teaching Fellow for Applied Software Engineering and Industry Projects. Instead of requiring a particular user interface application for specific sensors, our new client requested a set of tools that could be used for the further development of assistive technologies. In this way, our client is now expecting a collection of smaller projects to retrieve, visualise and store data. </p>
+                </div>
+                <div class="container">
+                    <p>
                             <h5><strong> Project Goals</strong></h5>
-                            <p> 
-                    Our aim is to collect data from wheelchair basketball players during a match or training session, and display it on an interface. The application will do this with the hope of encouraging players to improve their performance upon reflection of their statistics. This will in turn boost the general quality of wheelchair basketball across the team, increasing their chances of success in matches.
+                            <p> The aim of our project is to develop a set of tools that can visualise data, retrieve data from an API, generate mock data linked to the cloud, and display data on a user interface (mobile application). The tools will demonstrate to future developers the potential to integrate health related information in an application with the intent to maintain, improve and rehabilitate people with disabilities. </p>
+                            <p>Our project has focused these tools on wheelchair basketball players, as this is where our initial project began with our first client. However the concept can be applied to to other sports and activities. </p>
+                            <p>Our mobile application allows users to view data with the hope of encouraging players to improve their performance upon reflection of their statistics. This will in turn boost the general quality of wheelchair basketball across the team, not only increasing their chances of success in matches, but also improving their overall wellbeing. </p>
+                            <p>As our project has progressed, every part of research was valuable despite not necessarily being relevant to the final set of tools we have produced. The information we gathered from requirement gathering helped us produce our end product, and therefore is both useful for the development of our tools and the future technicians who may use our tools. For this reason, it is worth noting the progression from the research we undertook with our initial set of requirements. </p>
 
                     </p>
 
@@ -144,6 +153,9 @@
                         
                     <div class="container text-center">
                         <h3> <b>Information Gathered about End User</b></h3>
+                      </div>
+                      <div class="container text-center">
+
                         <div class="row">
                             <div class="col-sm-4">
                                 <img src="img/athlete.png" class="icon">
@@ -161,7 +173,7 @@
                         <h3> <b>Desired Features</b></h3>
                             <div class="container text-center">
                             <div class="col-sm-6">
-                                <h1><strong><bold>MUST:</bold></strong></h1>
+                                <h3>Must:</h3>
                                     <li>connect to a phone to get stats/ player profiles</li>
                                     <li>collect the following data: distance travelled over four separate quarters, average speed, top speed</li>
                                     <li> have an easy to use interface</li>
@@ -169,7 +181,7 @@
 
                             </div>
                             <div class="col-sm-6">
-                                <h1><strong><bold>COULD:</bold></strong></h1>
+                                <h3>Could:</h3>
                                     <li>provide heart rate data</li>
                                     <li>monitor passes and shots</li>
                                     <li>provide calories burnt</li>
@@ -313,7 +325,7 @@
             <section id="section5">
                                 <div class="container text-center">
                     <h2><strong>MoScoW Requirements</strong></h2>
-                    <p>Following our initial research to determine our requirements, our project and therefore our requirements changed drastically. Due to problems with existing legacy code on our client's side, our client changed the requirements for the software and hardware. Instead of using the ARCC sensors, our client decided it would be more appropriate to use a pre-built fitbit and use the fitbit API to retrieve data. </p>
+                    <p>Following our initial research to determine our requirements, our project and therefore our requirements changed drastically due to problems with existing legacy code on our client's side. At this point, the research we had undertaken to deduce our final requirements was relevant for our user interface but not could be applied to the back end features. However, with a week before submission, we were unable to complete extensive research for our new requirements. Instead we met with our new client, Dean Mohamedally, to produce the following requirements: </p>
 
                 </div>
                 <div class="container-fluid">
@@ -324,6 +336,7 @@
                           <th>Requirement</th>
                           <th>Priority</th>
                           <th>Feature</th>
+
                           
                         </tr>
                       </thead>
@@ -348,13 +361,13 @@
                         </tr>
                         <tr>
                               <th scope="row"></th>
-                              <td><b>The system must retrieve data from the Fitbit</b></td>
+                              <td><b>The system must retrieve data from the Fitbit API</b></td>
                             <td>Must</td>
                             <td>Functional</td>
                         </tr>
                         <tr>
                               <th scope="row"></th>
-                              <td><b>The system must have the option for the user to add a game</b></td>
+                              <td><b>The system must have the option for the user to add a training session</b></td>
                             <td>Must</td>
                             <td>Functional</td>
                         </tr>
@@ -390,31 +403,19 @@
                         </tr>
                         <tr>
                               <th scope="row"></th>
-                              <td><b>The system should calculate average speed</b></td>
+                              <td><b>The system should calculate average calories burnt, distance travelled, speed, active minutes across training sessions</b></td>
                             <td>Should</td>
                             <td>Functional</td>
                         </tr>
                         <tr>
                               <th scope="row"></th>
-                              <td><b>The system should calculate average calories burnt, distance travelled, speed, active minutes across games</b></td>
-                            <td>Should</td>
-                            <td>Functional</td>
-                        </tr>
-                        <tr>
-                              <th scope="row"></th>
-                              <td><b>The system should show the averages of statistics between set time frames</b></td>
+                              <td><b>The system should show the averages of statistics between training sessions</b></td>
                             <td>Should</td>
                             <td>Functional</td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                              <td><b>The system could allow the coach to share results of a player from a game</b></td>
-                            <td>Could</td>
-                            <td>Functional</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                              <td><b>The system could allow the player to share his results from a game</b></td>
+                              <td><b>The system could allow the player to share his results from a training session</b></td>
                             <td>Could</td>
                             <td>Functional</td>
                         </tr>
@@ -424,14 +425,8 @@
                             <td>Could</td>
                             <td>Non-Functional</td>
                         </tr>
-                        <tr>
                             <th scope="row"></th>
-                              <td><b>The system could use Firebase for data storage</b></td>
-                            <td>Could</td>
-                            <td>Functional</td>
-                        <tr>
-                            <th scope="row"></th>
-                              <td><b>The system could allow the user to view his best game in a month</b></td>
+                              <td><b>The system could allow the user to view his best training session in a month</b></td>
                             <td>Could</td>
                             <td>Functional</td>
                         </tr>
@@ -460,6 +455,62 @@
                     <div class="container">
                         <h2><strong> Use Cases</strong></h2>
                     </div>
+
+                    <div class="container-fluid">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Use Case</th>
+                          <th>Description</th>
+                          <th>Primary User</th>
+                          <th>Secondary User</th>
+                          <th>Pre Condition</th>   
+                          <th>Expected Flow</th>
+                          <th>Post Condition</th>
+                          <th>Alternative Flow</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr>
+                          <th scope="row"></th>
+                            <td><b>Log in to system</b></td>
+                            <td>Player</td>
+                            <td>None</td>
+                            <td>None</td>
+                            <td>User logs into system with their facebook account.</td>
+                            <td>Account is accepted and user logs in.</td>
+                            <td>The application displays the main dashboard page with the user logged in.</td>
+                            <td>Error</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                            <td><b>Add training session</b></td>
+                            <td>Player</td>
+                            <td>None</td>
+                            <td>User is logged in.</td>
+                            <td>User adds a training session to the list of games.</td>
+                            <td>Training session and data about session is added.</td>
+                            <td>The session is added to list of sessions and user is able to click on session to see statistics about it.</td>
+                            <td>Error</td>
+                        </tr>
+                        <tr>
+                              <th scope="row"></th>
+                            <td><b>Search sessions</b></td>
+                            <td>Player</td>
+                            <td>None</td>
+                            <td>None</td>
+                            <td>User can search sessions for a specific session.</td>
+                            <td>Session has been added to list of sessions.</td>
+                            <td>The application displays the session the user is looking for.</td>
+                            <td>Session not found.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </div>
+
                 
             </section>      
 </div>

@@ -65,7 +65,8 @@
                           <th>Priority</th>
                           <th>Feature</th>
                           <th>Progress</th>
-                          <th>Contributors</th>
+                          <th>Contributor</th>
+                          
                         </tr>
                       </thead>
                       <tbody>
@@ -89,13 +90,13 @@
                         </tr>
                         <tr>
                               <th scope="row"></th>
-                              <td><b>The system must retrieve data from the Fitbit</b></td>
+                              <td><b>The system must retrieve data from the Fitbit API</b></td>
                             <td>Must</td>
                             <td>Functional</td>
                         </tr>
                         <tr>
                               <th scope="row"></th>
-                              <td><b>The system must have the option for the user to add a game</b></td>
+                              <td><b>The system must have the option for the user to add a training session</b></td>
                             <td>Must</td>
                             <td>Functional</td>
                         </tr>
@@ -131,31 +132,19 @@
                         </tr>
                         <tr>
                               <th scope="row"></th>
-                              <td><b>The system should calculate average speed</b></td>
+                              <td><b>The system should calculate average calories burnt, distance travelled, speed, active minutes across training sessions</b></td>
                             <td>Should</td>
                             <td>Functional</td>
                         </tr>
                         <tr>
                               <th scope="row"></th>
-                              <td><b>The system should calculate average calories burnt, distance travelled, speed, active minutes across games</b></td>
-                            <td>Should</td>
-                            <td>Functional</td>
-                        </tr>
-                        <tr>
-                              <th scope="row"></th>
-                              <td><b>The system should show the averages of statistics between set time frames</b></td>
+                              <td><b>The system should show the averages of statistics between training sessions</b></td>
                             <td>Should</td>
                             <td>Functional</td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                              <td><b>The system could allow the coach to share results of a player from a game</b></td>
-                            <td>Could</td>
-                            <td>Functional</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                              <td><b>The system could allow the player to share his results from a game</b></td>
+                              <td><b>The system could allow the player to share his results from a training session</b></td>
                             <td>Could</td>
                             <td>Functional</td>
                         </tr>
@@ -165,14 +154,8 @@
                             <td>Could</td>
                             <td>Non-Functional</td>
                         </tr>
-                        <tr>
                             <th scope="row"></th>
-                              <td><b>The system could use Firebase for data storage</b></td>
-                            <td>Could</td>
-                            <td>Functional</td>
-                        <tr>
-                            <th scope="row"></th>
-                              <td><b>The system could allow the user to view his best game in a month</b></td>
+                              <td><b>The system could allow the user to view his best training session in a month</b></td>
                             <td>Could</td>
                             <td>Functional</td>
                         </tr>
@@ -199,13 +182,14 @@
 
                  <div class="container-fluid">
                         <h3>Known Bugs</h3>
+                        <p>After several design processes and testing, our application is almost without bugs. The only one that is left is of a rather logical nature. This means that in no manner is this going to affect the user productivity while making use of our application. However, there is still one drawbacks to consider:</p>
                 </div>
 
             <div class="container-fluid">
                     <table class="table table-striped">
                       <thead>
                         <tr>
-                          <th>ID</th>
+                          <th></th>
                           <th>Bug Description</th>
                           <th>Priority</th>
 
@@ -214,19 +198,11 @@
                       <tbody>
                         <tr>
                           <th scope="row"></th>
-                            <td><b></b></td>
-                            <td></td>
+ 
+                            <td>Exposure: when a user logs in into our application, some of his data is stored into a json file which is within the internal memory of the phone. The same file is sent to a RESTful API that processes the information and allows the user to go over and use a browser to visualise some of his game data using a specific link. However, whenever another user logs in using the same phone, some of his data is stored into the same json file. This means that the data of the users is exposed through the entire API, which could lead to data privacy concerns in the future.</td>
+                            <td>High</td>
                         </tr>
-                        <tr>
-                          <th scope="row"></th>
-                            <td><b></b></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                          <th scope="row"></th>
-                            <td><b></b></td>
-                            <td> </td>
-                        </tr>
+
                       </tbody>
                     </table>
 
@@ -345,23 +321,31 @@
 
                 <div class="container-fluid">
                         <h3>User Interface</h3>
+                        <p>We have designed our use interface with an accessible menu so the user can navigate to any page with ease. In this way the application is convenient to use and isn't time consuming for the user to retrieve any information. Additionally, the interface uses a consistent colour theme and icons to make the application to both make the application more aesthetically pleasing and also ensure that it is straightforward to use. </p>
+                        <p>Once the user has entered the main dashboard, the interface displays the data as colour coded graphs, representing data from different games. In this way, it is easier for the user to compare their statistics between different games. </p>
+                        <p>The application is scrollable, and users are also able to scroll horizantally through their different statistics or vertically through different games. This makes the navigation of the application smooth and more pleasing to use. </p>
                 </div>
                 <div class="container-fluid">
                         <h3>Functionality</h3>
+                        <p>Although at present the application uses replica data, the front end meets all of the functional 'must have' requirements, and even some 'should haves' and 'could haves'. Within the scope of our project, it was not possible to implement these features as a part of a fully functional application, but with further development on the back end in terms of retrieving data, the application will meet all the requirements. </p>
                     </div>
                 <div class="container-fluid">
                         <h3>Stability</h3>
+                        <p>To make our code stable, we produced extensive unit tests. If the tests are repeatedly run when the code is changed, then it is easy to ensure all functionalities still work.</p>
                 </div>
                 <div class="container-fluid">
                         <h3>Efficiency</h3>
+                        <p>To ensure our code is efficient, we complied with object-oriented best practices in terms of the structure of our code, using correct classes and design patterns such as adapters and builders. </p>
                 </div>
                 <div class="container-fluid">
                         <h3>Compatibility</h3>
-                        <p>At present, our application is only compatible on Android devices. In terms of our requirements, this fulfills the 'must have' that the application must compatible on either Android <b>or</b> iOS. This was decided as the result from our surveys showed half of the current potential end users use iOS devices and half of them use Android devices. </p>
-                        <p>However, this discounts half of our end users and therefore has a 'should have' requirement we decided the application should be compatible on both types of devices. Given the limited time frame we had, this was not possible, but will definitely be a next step for further development of the application.</p>
+                        <p>At present, our application is only compatible on Android devices. In terms of our requirements, this fulfills the 'must have' that the application must compatible on either Android <b>or</b> iOS. This was decided as the result from our surveys which showed half of the current potential end users use iOS devices and half of them use Android devices. </p>
+                        <p>However, this discounts half of our end users and therefore as a 'should have' requirement we decided the application should be compatible on both types of devices. Given the limited time frame we had, this was not possible, but will definitely be a next step for further development of the application.</p>
                 </div>
                 <div class="container-fluid">
                         <h3>Maintainability</h3>
+                        <p>Our code is structured is such a way to ease the maintenance for future developers. For the front end, we have used classes to separate each screen so it is easy to identify what section of the code needs modifying if a future developer wants to change an element of specific screen. Additioanlly, as mentioned in the design section, we have used adapters which allow modifications to specific elements without affecting the functionality of other parts of the code. </p>
+                        <p>In terms of the code itself, it is commented throughout for future developers to edit the legacy code with ease. Variable names have been chosen to ensure the code is self-explanatory.</p> 
                 </div>
                 <div class="container-fluid">
                         <h3>Project Management</h3>
@@ -373,6 +357,14 @@
             <section id="section3">
                    <div class="container text-center">
                         <h2><strong> Future Work</strong></h2>
+                        <p>With our project impacted by major setbacks, our final deliverable is designed to be the start of further development. For this reason there is plenty of scope for future work. Looking into the next three months, we would hope to achieve the following: </p>
+                        <p><b>Month 1</b></br>
+                        Within the first month, we would hope to retrieve data from the Fitbit API and integrate this with the mobile application. In this way, we will use real data, allowing the application to actually be used alongside a wristband containing a sensor. The application will be functional for an end user at this point, instead of just being a stepping stone for our client, a further developer. </p>
+                        <p><b>Month 2</b></br>
+                        In the second month, we will make our application compatible both with iOS and Android. This will have a significant impact on the range of end users our application will target; the application will be usable by the entire set of current end users as opposed to half of them. In order to implement this, we will develop the front end using Xamarin. From the first month, we will have the back end retrieving data from the Fitbit API, which we will also integrate with out iOS application at this point. </p>
+                        <p><b>Month 3</b></br>
+                        Looking further into the future, we would hope to extend the functionality of the application. One feature we looked into would be to link users' accounts and create some sort of leader board between team members so that they could see better how they perform as a team and individually. We also considered further extending this to creating a separate log in system for a coach, so they could see the statistics of all players.</p>
+
                     </div>
 
 

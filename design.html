@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wheelchair Basketball Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Add later navbar-fixed-ontop -->
+<nav class="navbar transparent navbar-inverse" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="underlined active"><a href="index.html" class="fix-underline-a"><font color="black">HOME</font></a></li>
+                    <li class="underlined"><a href="requirements.html"><font color="black">REQUIREMENTS</font></a></li>
+                    <li class="underlined"><a href="research.html"><font color="black">RESEARCH</font></a></li>
+                    <li class="underlined"><a href="hci.html"><font color="black">HCI</font></a></li>
+                    <li class="underlined"><a href="design.html"><font color="black">DESIGN</font></a></li>
+                    <li class="underlined"><a href="testing.html"><font color="black">TESTING</font></a></li>
+                    <li class="underlined"><a href="evaluation.html"><font color="black">EVALUATION</font></a></li>
+                    <li class="underlined"><a href="management.html"><font color="black">MANAGEMENT</font></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+ <div class="container">
+    <div class="row">
+        <div id="my=nav" class ="span3">
+            <ul class="nav nav-list affix">
+                <li><a href="#section1">System Architecture</a></li>
+                <li><a href="#section2">Class Diagram</a></li>
+                <li><a href="#section3">Sequence Diagram</a></li>
+                <li><a href="#section4">Design Patterns</a></li>
+                <li><a href="#section5">Data Storage</a></li>
+                <li><a href="#section6">Key Functionalities</a></li>
+
+            </ul>
+        </div>
+        <div class="span9 my-content">
+            <section id="section1"> 
+              <div class="container-fluid">
+                <h2><strong> System Architecture</strong></h2>
+                <p>Our system is made up of different components that make up a set of tools. The following subsections make up the system as a whole:</p>
+            </div>
+            <div class="container-fluid">
+                <h3>ARCCS Sensor Visualiser</h3>
+                <p>Our visualiser is a java application that takes in sample IMU sensor data and displays it on a graph. Both the gyroscope and accelerometer data can be formatted using the visualiser. To access the visualiser, the user uses a simple GUI created using SWING.</p>
+            </div>
+
+
+            </section>
+            <section id="section2">
+            <div class="container"> 
+                <div class="container-fluid">
+                <h2><strong> Class Diagram</strong></h2>
+            </div>
+                <img src="img/uml.png" style="width:1200px;height:600px;">
+
+            </div>
+
+
+            </section>    
+            <section id="section3"> 
+                <div class="container-fluid">
+                <h2><strong> Sequence Diagram</strong></h2>
+            </div>
+
+            </section>  
+            <section id="section4"> 
+                <div class="container-fluid">
+                <h2><strong> Design Patterns</strong></h2>
+            </div>
+            <div class="container-fluid">
+                <h3>Back End Design- Creational Patterns</h3>
+            </div>
+
+            <div class="container-fluid">
+                <p><b>Singleton</b></p>
+                <p>Throughout the app, we are restricting the DataController and JSONSender to only have one instance per session. This means that all the data generation and calculations are handled by the same controller, and everything that has to do with post requests is done by the same sender object whenever a change occurs within the JSON file stored and has to be sent to the server and update the database. To further support the memory management of our application, we use a lazy implementation of the singletons so that the instance is only created when the app requests access to the controller or sender object (via the getInstance() method).</p>
+                <img src="img/design1.png">
+                <img src="img/design2.png">
+ 
+                <p><b>Dependency Injection</b></p>
+                <p>Due to the fact that we are using singletons, we need these objects to be accessible in all activities that require any information their instances. By using intents, we are passing these objects from one activity to another, so when one activity requires access to that object, everything is there and ready for further interactions with these objects. </p>
+                <img src="img/design3.png">
+
+                <p><b>Builder</b></p>
+                <p>One of the classes that is found in our project is the User class. It contains all the information that we need from a user and all of this is stored in the json file. Due to the fact that it has many fields, we wanted to separate the construction of this more complex objects from its representation. Thus, in case we want to create numerous users, the same construction process is used to create different representations. All from the above is handled by the UserBuilder class:</p>
+                <img src="img/design4.png">
+                <img src="img/design5.png">
+            </div>
+          <div class="container-fluid">
+                <h3>Back End Design- Structural Patterns</h3>
+            </div>
+
+            <div class="container-fluid">
+                <p><b>Adapter</b></p>
+                <p>After we went through the design implementation of our code, we realized that some classes were incompatible with each other, so no interaction was possible between one and another. Therefore, we included several adapters in our code to ensure a good compatibility between different resources and that the connections are without errors. One example is the RecyclerAdapter class, used to create all our layers:</p>
+                <img src="img/design6.png">
+  
+            </div>
+          <div class="container-fluid">
+                <h3>Back End Design- Behavioural Patterns</h3>
+            </div>
+
+            <div class="container-fluid">
+                <p><b>MVC</b></p>
+                <p>This design pattern is at the foundation of our project. Throughout the entire project we had in mind the objective of having a reusable code, so that other developers could come and use what we have built and improve it. The MVC pattern enables us to achieve this goal. Therefore, our application has classes that: </p>
+                <li><b>model</b> the real world, such as User, Game.</li>
+                <li>offer <b>visual</b> features, which is everything that is tangible by the user, such as MainDasboard.</li>
+                <li><b>control</b> which make the connection between the first two, such as DataController, Settings.</li>
+
+  
+            </div>
+            </section> 
+            <section id="section5"> 
+                <div class="container-fluid">
+                <h2><strong> Data Storage</strong></h2>
+            </div>
+            </section> 
+            <section id="section6"> 
+                <div class="container-fluid">
+                <h2><strong> Key Functionalities</strong></h2>
+            </div>
+            </section> 
+            <section id="section7"> 
+
+            </section>                         
+</div>
+</div>
+</div>
+
+
+
+
+    <footer class="footer-distributed">
+
+
+        <div class="footer-left">
+            <p>
+                
+                COMP214P Systems Engineering - Team 31
+            </p>
+        </div>
+
+    </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
