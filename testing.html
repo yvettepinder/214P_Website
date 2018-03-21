@@ -32,7 +32,7 @@
                     <li class="underlined"><a href="research.html"><font color="black">RESEARCH</font></a></li>
                     <li class="underlined"><a href="hci.html"><font color="black">HCI</font></a></li>
                     <li class="underlined"><a href="design.html"><font color="black">DESIGN</font></a></li>
-                    <li class="underlined"><a href="testing.html"><font color="black">TESTING</font></a></li>
+                    <li class="underlined"><a href="testing.html"><font color="black"><b><u>TESTING</u></b></font></a></li>
                     <li class="underlined"><a href="evaluation.html"><font color="black">EVALUATION</font></a></li>
                     <li class="underlined"><a href="management.html"><font color="black">MANAGEMENT</font></a></li>
                 </ul>
@@ -52,7 +52,7 @@
             </ul>
         </div>
         <div class="span9 my-content">
-            <section id="section1"> 
+            <section id="section1">
                     <div class="container text-center">
                         <h2><strong> Test Strategies</strong></h2>
                     </div>
@@ -79,9 +79,9 @@
 
                         <p> For the features that require data to be <b>displayed</b> (i.e. 1, 2, and 6), the we will use the following implementation of the standard functional testing steps:</p>
 
-                        
 
-                        
+
+
                     </div>
 
                     <table class="table table-striped">
@@ -133,7 +133,7 @@
                         <tr>
                           <th scope="row"></th>
                             <td><b>Identify test input data</b></td>
-                                              <td>As the json file generator we created only generates random values, we will use sample data for the calculation tests, so that we can choose the values ourselves. We will create sample arrays in the same form as those that can be derived from the json files. 
+                                              <td>As the json file generator we created only generates random values, we will use sample data for the calculation tests, so that we can choose the values ourselves. We will create sample arrays in the same form as those that can be derived from the json files.
                                 </td>
                         </tr>
                         <tr>
@@ -222,7 +222,7 @@
                         <p> Stress testing is a method that puts an application under extreme conditions as a way of testing the behaviour of the application beyond normal circumstances. In this way, stress testing allows the developer to detect the robustness of the application and to understand the upper limits of the capacity within the system. This will in turn improve error handling by considering 'worst-case' scenarios. </p></div>
 
                     <div class="container text-center">
-                        <b>1. Mission Critical Application</b> 
+                        <b>1. Mission Critical Application</b>
 
                         <p>Stress testing is necessary for a number of reasons, most significantly for applications which possess potential risks of high severity. For this reason, stress testing is relevant for our application as it provides health-related data for, in some cases, medically vulnerable people and therefore the failure of the application could have disastrous consequences. Applications with this characteristic are said to be 'mission critical'. </p>
 
@@ -237,7 +237,7 @@
                     </div>
                     <div class="container text-center">
 
-                        <p>In general, certain issues with our application may not be visible in the short amount of time we have been working on it. Stress testing for a relatviely short amount of time is a method of simulating normal operation for a longer period of time, in an attempt to detect previously hidden bugs. There are a number of advantages and disadvantages associated with stress testing:</p> 
+                        <p>In general, certain issues with our application may not be visible in the short amount of time we have been working on it. Stress testing for a relatviely short amount of time is a method of simulating normal operation for a longer period of time, in an attempt to detect previously hidden bugs. There are a number of advantages and disadvantages associated with stress testing:</p>
                     </div>
 
                     <div class="container text-center">
@@ -269,7 +269,7 @@
                                 <tr>
                                   <th scope="row"></th>
                                     <td><b>Load Testing- to understand the behaviour of the system under a specific load</b></td>
-                                                      <td>The 'load' we will specify will be the number of json files we test with. This can be used to represent the number of expected uses, i.e. number of expected sets of incoming data. 
+                                                      <td>The 'load' we will specify will be the number of json files we test with. This can be used to represent the number of expected uses, i.e. number of expected sets of incoming data.
                                         </td>
                                 </tr>
                                 <tr>
@@ -294,7 +294,7 @@
                         <h2><strong> Unit Testing</strong></h2>
 
                         <p> Unit testing is a method of testing that test a small functionality of the code to differentiate between working and problematic code. In this way, it is easy to change code that uses unit testing, as the developer can see which parts of the code are not working. </p>
-                        
+
                         <p>As part of the unit testing for our Android application, we have developed local unit tests that can run on the JVM. These tests run much faster than the time required to deploy and run tests on an Android device, and ensure stability of each section within the whole application.</p>
 
 
@@ -305,43 +305,43 @@
                         <p>For our unit tests, we have used JUnit, which is compatible in Android Studio. We have used the tests for the backend to check each piece of data is in the correct format. For example:</p>
 
                         <img src="img/unitTests.png">
-                         
+
                 </div>
 
-            </section>  
-            <section id="section3"> 
+            </section>
+            <section id="section3">
                     <div class="container">
                         <h2><strong> Acceptance Testing</strong></h2>
-                      
+
                         <p>As our application is to be used by a client with potentially no technical expertise, it is essential that we undergo usability testing. In this way, we can spot and fix problems before the application is finished. As part of our usability testing process, we considered the following five elements: </p>
                     </div>
 
                     <div class="container text-center">
                         <h3><strong>1. Learnability</strong></h3>
-    
+
                         <p>Learnability refers to how easy it is for users to accomplish basic tasks the first time they encounter the design. As part of our test for learnbility, we asked our client to use the application with no prior instruction as to how it works. Our application only has few buttons and each button is labeled. For this reason the app needs no further instruction set and there for is very learnable. </p>
 
                         <h3><strong>2. Efficiency</strong></h3>
-  
+
                         <p>Our next point to take into consideration for usability testing is the efficiency of the application.Following review, we noticed that this is something that could be improved about our application. To navigate through the application, the user has to click on a number of consecutive buttons, and there is no easy go-to menu. For this reason it can take a long time for the user to find the information they want.  </p>
 
                         <h3><strong>3. Memorability</strong></h3>
-    
+
                         <p>Memorability refers to how easy it is for the user to use the application after perhaps not using it for some time. However, our application is so simplistic that this links to learnability; the app is very easy to use without need of further instruction and therefore a user should not forget, or will not need to remember, how to use the application.   </p>
 
                         <h3><strong>4. Errors</strong></h3>
-    
+
                         <p>We could consider an error from the user an incorrect button pressed, as the application is for the display of data rather than modification from the user, Although this is not troublesome in terms of severity affecting the functionality of the app, it may be frustrating for the user to navigate back to where they were in the application, as this was already identified as an issue regarding efficiency. </p>
 
                         <h3><strong>5. Satisfaction</strong></h3>
-   
+
                         <p>Satisfaction refers to how much the user likes using the program. For those who value simplicity, the application is enjoyable to navigate and use. However, the application could be made more aesthetically pleasing with more colours, images and interactive features. </p>
                     </div>
 
 
-            </section>    
+            </section>
 
-            <section id="section4"> 
+            <section id="section4">
                     <div class="container">
                         <h2><strong> UI Testing</strong></h2>
 
@@ -351,7 +351,7 @@
                         <p> At present, this method is fine for our application because it is simple and does not have many featuries. However, this can be time-consuming, tedious and error-prone with further development of the app. For our next stage of UI testing, we wll to write automated UI tests to perform the operations, allowing us to run our tests quickly and reliably in a repeatable manner. </p>
                         <p>To perform the automated tests on our application in Android Studio, we will use the testing framework Espresso, which allows you to programmatically simulate user actions and test complex intra-app user interactions.</p>
                     </div>
-            </section>  
+            </section>
 </div>
 </div>
 </div>
@@ -364,7 +364,7 @@
 
         <div class="footer-left">
             <p>
-                
+
                 COMP214P Systems Engineering - Team 31
             </p>
         </div>

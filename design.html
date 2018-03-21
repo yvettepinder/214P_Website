@@ -29,7 +29,7 @@
                     <li class="underlined"><a href="requirements.html"><font color="black">REQUIREMENTS</font></a></li>
                     <li class="underlined"><a href="research.html"><font color="black">RESEARCH</font></a></li>
                     <li class="underlined"><a href="hci.html"><font color="black">HCI</font></a></li>
-                    <li class="underlined"><a href="design.html"><font color="black">DESIGN</font></a></li>
+                    <li class="underlined"><a href="design.html"><font color="black"><b><u>DESIGN</u></b></font></a></li>
                     <li class="underlined"><a href="testing.html"><font color="black">TESTING</font></a></li>
                     <li class="underlined"><a href="evaluation.html"><font color="black">EVALUATION</font></a></li>
                     <li class="underlined"><a href="management.html"><font color="black">MANAGEMENT</font></a></li>
@@ -52,7 +52,7 @@
             </ul>
         </div>
         <div class="span9 my-content">
-            <section id="section1"> 
+            <section id="section1">
               <div class="container-fluid">
                 <h2><strong> System Architecture</strong></h2>
                 <p>Our system is made up of different components that make up a set of tools. The following subsections make up the system as a whole:</p>
@@ -76,7 +76,7 @@
 
             </section>
             <section id="section2">
-            <div class="container"> 
+            <div class="container">
                 <div class="container-fluid">
                 <h2><strong> Class Diagram</strong></h2>
             </div>
@@ -85,118 +85,137 @@
             </div>
 
 
-            </section>    
-            <section id="section3"> 
-                <div class="container"> 
+            </section>
+            <section id="section3">
+                <div class="container">
                 <div class="container-fluid">
                 <h2><strong> Sequence Diagram</strong></h2>
             </div>
             <img src="img/sequence.png" style="width:1200px;height:400px;">
         </div>
 
-            </section>  
-            <section id="section4"> 
+            </section>
+            <section id="section4">
                 <div class="container-fluid">
                 <h2><strong> Design Patterns</strong></h2>
             </div>
-            <div class="container-fluid">
-                <h3>Back End Design- Creational Patterns</h3>
-            </div>
 
             <div class="container-fluid">
-                <p><b>Singleton</b></p>
-                <p>Throughout the app, we are restricting the DataController and JSONSender to only have one instance per session. This means that all the data generation and calculations are handled by the same controller, and everything that has to do with post requests is done by the same sender object whenever a change occurs within the JSON file stored and has to be sent to the server and update the database. To further support the memory management of our application, we use a lazy implementation of the singletons so that the instance is only created when the app requests access to the controller or sender object (via the getInstance() method).</p>
-                <img src="img/design1.png">
-                <img src="img/design2.png">
- 
-                <p><b>Dependency Injection</b></p>
-                <p>Due to the fact that we are using singletons, we need these objects to be accessible in all activities that require any information their instances. By using intents, we are passing these objects from one activity to another, so when one activity requires access to that object, everything is there and ready for further interactions with these objects. </p>
-                <img src="img/design3.png">
+                <h3>Singleton</h3>
 
-                <p><b>Builder</b></p>
-                <p>One of the classes that is found in our project is the User class. It contains all the information that we need from a user and all of this is stored in the json file. Due to the fact that it has many fields, we wanted to separate the construction of this more complex objects from its representation. Thus, in case we want to create numerous users, the same construction process is used to create different representations. All from the above is handled by the UserBuilder class:</p>
-                <img src="img/design4.png">
-                <img src="img/design5.png">
-            </div>
- 
-          <div class="container-fluid">
-                <h3>Back End Design- Behavioural Patterns</h3>
+                <p>
+                  The singleton pattern is a creational design pattern which provides a way to create a
+                  singular object. This pattern involves a single class which is responsible to create an object
+                  while making sure that only single object gets created. This class provides a way to access
+                  its only object which can be accessed directly without need to instantiate the object of the
+                  class.
+                </p>
+
+                <p>For our application, we are restricting the DataController and JSONSender to only have one instance per session. This means that all the data generation and calculations are handled by the same controller, and everything that has to do with post requests is done by the same sender object whenever a change occurs within the JSON file stored and has to be sent to the server and update the database. To further support the memory management of our application, we use a lazy implementation of the singletons so that the instance is only created when the app requests access to the controller or sender object (via the getInstance() method).</p>
+
+                <h3>Dependency Injection</h3>
+                <p>
+                  Dependency injection is a technique whereby one object supplies the dependencies of another object
+                  meaning objects are given their dependencies at run time rather than compile time. We have used this
+                  throughout our application, for example in our adapters, to customise the passed objects.
+                </p>
+
+                <h3>Builder</h3>
+
+                <p>The builder pattern involves creating an object in a step by step approach by creating
+                   simpler objects contained in the final one first. One of the classes that is found in our project is the User class. It contains all the information that we need
+                   from a user and all of this is stored in the json file. Due to the fact that it has many fields, we wanted to
+                   separate the construction of this more complex objects from its representation. Thus, in case we want to create
+                   numerous users, the same construction process is used to create different representations. All from the above
+                   is handled by the UserBuilder class:</p>
+
+                <h3>MVC</h3>
+
+                <p>
+                  MVC Pattern stands for model-view-controller Pattern. This pattern is used to separate
+                  application with the user interface. The model represents the class which holds the data. It
+                  has the logic to update controller if its data changes.The view represents the visualisation
+                  (user interface) of the data that model contains. The controller acts on both model and
+                  view. It controls the data flow into model object and updates the view whenever data
+                  changes. It keeps view and model separate. We use this design pattern to separate all the
+                  training session data with the user interface.
+                </p>
             </div>
 
-            <div class="container-fluid">
-                <p><b>MVC</b></p>
-                <p>This design pattern is at the foundation of our project. Throughout the entire project we had in mind the objective of having a reusable code, so that other developers could come and use what we have built and improve it. The MVC pattern enables us to achieve this goal. Therefore, our application has classes that: </p>
-                <li><b>model</b> the real world, such as User, Game.</li>
-                <li>offer <b>visual</b> features, which is everything that is tangible by the user, such as MainDasboard.</li>
-                <li><b>control</b> which make the connection between the first two, such as DataController, Settings.</li>
 
-  
-            </div>
-
-             <div class="container-fluid">
-                <h3>Front End Design- Structural Patterns</h3>
-            </div>
-
-            <div class="container-fluid">
-                <p><b>Adapter</b></p>
-                <p>The application uses two different adapters in order to create customisable horizontal and vertical listview displays. The list adapter is used to alter the regular listview object. It allows the application to support multiple different user defined display types in the list by specifying the “Type” parameter. For instance, if a new display, such as a mini graph for heart rate, is required, the system could easily support this addition. The recycler adapter is used to create a horizontal list display. This comes with a click listener which handles changes in the graph display.</p>
-                <img src="img/design6.png">
-  
-            </div>
-            </section> 
-            <section id="section5"> 
+            </section>
+            <section id="section5">
                 <div class="container-fluid">
-                <h2><strong> Data Storage</strong></h2>
-            </div>
-            </section> 
-            <section id="section6"> 
-                <div class="container-fluid">
-                <h2><strong> Key Functionalities</strong></h2>
-                <p>The front end part of the application was built primarily using XML files and layout to create and customise the different screens of our application. XML is completely compatible with Java and is fully portable to be used with any application that can process it. It allowed us to create an interactive and functional display which, when combined with the application logic, creates an attractive and easy to use user experience.</p>
+                    <h2><strong> Data Storage</strong></h2>
 
-                <p>Using Android Studio allowed us to quickly create and adjust these files using their interface. From creating different objects such as buttons, to managing the multiple different views possible. A number of different images and familiar icons relating to basketball were also added to the app.
-                    </p>
-            </div>
-
-            <div class="container-fluid">
-                <h3>Graphs</h3>
-                <p>A major functionality of the front end design makes use of the MPAndroid Chart Library by PhilJay to display a graphical representation of the data. Bar Charts were used to display a summary of a data variable. These particular data variables are selected by the user in the Recycler View which communicates with the graph display to automatically update its contents upon selection with animations.
-
-                The graph also features two different types of listeners. The first is a normal press which will result in the game name of the selected bar popping up on the screen. The second is a long press which will take the user to GameDisplay page for that game. </p>
-
-            </div>
-                        <div class="container-fluid">
-                <h3>Scaling</h3>
-                <p>All pages are scalable to different device sizes through the use of layout weights and scroll views. For example, the main dashboard will adjust accordingly to fit the screen, giving emphasis on larger widgets such as the graph display as this is key to the importance of the app. Longer display string variables will also have their font size reduced to avoid overlapping widgets.  </p>
-
-            </div>
-
-
-                        <div class="container-fluid">
-                <h3>Input Assistance and Feedback</h3>
-                <p>All user input fields have keyboard entry tools related to the type of input required. For example, auto word capitalisation for titles, number pads for integer inputs and . In particular, the system includes date and time picker widgets which restrict invalid characters and automatically output data in required formats for DataController. 
-
-                Any key functionalities performed, such as adding and deleting a game, are followed up by popup toast messages to inform the user of the action performed. This helps ensure they know the action was successful. 
+                    <p>
+                      Due to the fact that our entire system is based upon an Android application consuming a RESTful API, we process
+                       the data first internally using JSON. The file itself is a JSON array, which contains all the relevant data about
+                        the users and their games. Each user is a JSON object which contains different relevant fields as well as a JSON
+                         array of games. The structure of the file is the following:
                     </p>
 
+                    <img src="img/storage1.png">
+
+                    <p>
+                      The file is then stored within the phone and is sent using POST requests to the Nodejs server which inserts the
+                       data into the Mongo database. The file is then parsed object by object and saved using mongoose and schemas as seen below.
+                       In the end, the server and the database are hosted using Microsoft Azure. The Mongo database is imported and emulated using CosmosDB.
+                    </p>
+
+
+                    <img src="img/storage2.png" style="width:300px;height:400px;">
+                    <img src="img/storage3.png" style="width:400px;height:300px;">
+
+                </div>
+            </section>
+
+
+            <section id="section6">
+              <div class="container-fluid">
+                <h2><strong> Key Functionalities Implementation</strong></h2>
+
+
+
+              <h3>Front End Technologies</h3>
+
+              <p>The front end part of the application was built primarily using XML files and layout to create and customise the different screens of our application. XML is completely compatible with Java and is fully portable to be used with any application that can process it. It allowed us to create an interactive and functional display which, when combined with the application logic, creates an attractive and easy to use user experience.</p>
+
+              <p>Using Android Studio allowed us to quickly create and adjust these files using their interface. From creating different objects such as buttons, to managing the multiple different views possible. A number of different images and familiar icons relating to basketball were also added to the app.
+              </p>
+
+              <h3>Variables Dispplay</h3>
+              <p>The application uses two different adapters in order to create customisable horizontal and vertical listview displays. The list adapter is used to alter the regular listview object. It allows the application to support multiple different user defined display types in the list by specifying the “Type” parameter. For instance, if a new display, such as a mini graph for heart rate, is required, the system could easily support this addition. The recycler adapter is used to create a horizontal list display. This comes with a click listener which handles changes in the graph display.</p>
+
+              <h3>Graphs</h3>
+              <p>A major functionality of the front end design makes use of the MPAndroid Chart Library by PhilJay to display a graphical representation of the data. Bar Charts were used to display a summary of a data variable. These particular data variables are selected by the user in the Recycler View which communicates with the graph display to automatically update its contents upon selection with animations. The graph also features two different types of listeners. The first is a normal press which will result in the game name of the selected bar popping up on the screen. The second is a long press which will take the user to GameDisplay page for that game. </p>
+
+
+              <h3>Scaling</h3>
+              <p>All pages are scalable to different device sizes through the use of layout weights and scroll views. For example, the main dashboard will adjust accordingly to fit the screen, giving emphasis on larger widgets such as the graph display as this is key to the importance of the app. Longer display string variables will also have their font size reduced to avoid overlapping widgets.  </p>
+
+
+              <h3>Input Assistance and Feedback</h3>
+              <p>All user input fields have keyboard entry tools related to the type of input required. For example, auto word capitalisation for titles, number pads for integer inputs and . In particular, the system includes date and time picker widgets which restrict invalid characters and automatically output data in required formats for DataController.
+              Any key functionalities performed, such as adding and deleting a game, are followed up by popup toast messages to inform the user of the action performed. This helps ensure they know the action was successful.
+              </p>
+
             </div>
-            </section> 
-            <section id="section7"> 
 
-            </section>                         
+            </section>
+
+            <section id="section7">
+
+            </section>
 </div>
 </div>
 </div>
-
-
-
 
     <footer class="footer-distributed">
 
-
         <div class="footer-left">
             <p>
-                
+
                 COMP214P Systems Engineering - Team 31
             </p>
         </div>
