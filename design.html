@@ -87,9 +87,12 @@
 
             </section>    
             <section id="section3"> 
+                <div class="container"> 
                 <div class="container-fluid">
                 <h2><strong> Sequence Diagram</strong></h2>
             </div>
+            <img src="img/sequence.png" style="width:1200px;height:400px;">
+        </div>
 
             </section>  
             <section id="section4"> 
@@ -115,16 +118,7 @@
                 <img src="img/design4.png">
                 <img src="img/design5.png">
             </div>
-          <div class="container-fluid">
-                <h3>Back End Design- Structural Patterns</h3>
-            </div>
-
-            <div class="container-fluid">
-                <p><b>Adapter</b></p>
-                <p>After we went through the design implementation of our code, we realized that some classes were incompatible with each other, so no interaction was possible between one and another. Therefore, we included several adapters in our code to ensure a good compatibility between different resources and that the connections are without errors. One example is the RecyclerAdapter class, used to create all our layers:</p>
-                <img src="img/design6.png">
-  
-            </div>
+ 
           <div class="container-fluid">
                 <h3>Back End Design- Behavioural Patterns</h3>
             </div>
@@ -138,6 +132,17 @@
 
   
             </div>
+
+             <div class="container-fluid">
+                <h3>Front End Design- Structural Patterns</h3>
+            </div>
+
+            <div class="container-fluid">
+                <p><b>Adapter</b></p>
+                <p>The application uses two different adapters in order to create customisable horizontal and vertical listview displays. The list adapter is used to alter the regular listview object. It allows the application to support multiple different user defined display types in the list by specifying the “Type” parameter. For instance, if a new display, such as a mini graph for heart rate, is required, the system could easily support this addition. The recycler adapter is used to create a horizontal list display. This comes with a click listener which handles changes in the graph display.</p>
+                <img src="img/design6.png">
+  
+            </div>
             </section> 
             <section id="section5"> 
                 <div class="container-fluid">
@@ -147,6 +152,33 @@
             <section id="section6"> 
                 <div class="container-fluid">
                 <h2><strong> Key Functionalities</strong></h2>
+                <p>The front end part of the application was built primarily using XML files and layout to create and customise the different screens of our application. XML is completely compatible with Java and is fully portable to be used with any application that can process it. It allowed us to create an interactive and functional display which, when combined with the application logic, creates an attractive and easy to use user experience.</p>
+
+                <p>Using Android Studio allowed us to quickly create and adjust these files using their interface. From creating different objects such as buttons, to managing the multiple different views possible. A number of different images and familiar icons relating to basketball were also added to the app.
+                    </p>
+            </div>
+
+            <div class="container-fluid">
+                <h3>Graphs</h3>
+                <p>A major functionality of the front end design makes use of the MPAndroid Chart Library by PhilJay to display a graphical representation of the data. Bar Charts were used to display a summary of a data variable. These particular data variables are selected by the user in the Recycler View which communicates with the graph display to automatically update its contents upon selection with animations.
+
+                The graph also features two different types of listeners. The first is a normal press which will result in the game name of the selected bar popping up on the screen. The second is a long press which will take the user to GameDisplay page for that game. </p>
+
+            </div>
+                        <div class="container-fluid">
+                <h3>Scaling</h3>
+                <p>All pages are scalable to different device sizes through the use of layout weights and scroll views. For example, the main dashboard will adjust accordingly to fit the screen, giving emphasis on larger widgets such as the graph display as this is key to the importance of the app. Longer display string variables will also have their font size reduced to avoid overlapping widgets.  </p>
+
+            </div>
+
+
+                        <div class="container-fluid">
+                <h3>Input Assistance and Feedback</h3>
+                <p>All user input fields have keyboard entry tools related to the type of input required. For example, auto word capitalisation for titles, number pads for integer inputs and . In particular, the system includes date and time picker widgets which restrict invalid characters and automatically output data in required formats for DataController. 
+
+                Any key functionalities performed, such as adding and deleting a game, are followed up by popup toast messages to inform the user of the action performed. This helps ensure they know the action was successful. 
+                    </p>
+
             </div>
             </section> 
             <section id="section7"> 
