@@ -27,7 +27,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="underlined active"><a href="index.html" class="fix-underline-a"><font color="black">HOME</font></a></li>
                     <li class="underlined"><a href="requirements.html"><font color="black">REQUIREMENTS</font></a></li>
-                    <li class="underlined"><a href="research.html"><font color="black">RESEARCH</font></a></li>
+                    <li class="underlined"><a href="research.html"><font color="black"><b><u>RESEARCH</u></b></font></a></li>
                     <li class="underlined"><a href="hci.html"><font color="black">HCI</font></a></li>
                     <li class="underlined"><a href="design.html"><font color="black">DESIGN</font></a></li>
                     <li class="underlined"><a href="testing.html"><font color="black">TESTING</font></a></li>
@@ -50,17 +50,17 @@
             </ul>
         </div>
         <div class="span9 my-content">
-            <section id="section1"> 
+            <section id="section1">
                     <div class="container text-center">
                         <h2><strong> Potential Technologies</strong></h2>
                     </div>
 
                     <div class="container-fluid">
-                        <h3><u>Bespoke Java Application</u></h3>
+                        <h3><u>ARRCS Sensors + Bespoke Java Application</u></h3>
                     </div>
 
                     <div class="container-fluid">
-                        
+
                         <p>Originally, we were using a java application written by someone working with our client. From this, we intended to receive the data from the sensors and integrate it into an android application. However, attempting to implement this ran us into a number of problems. </p>
 
                         <p>First of all, the java application is only compatible with a 32 bit java virtual machine, which means a lot of configuration to get it to work. Despite best efforts, we only managed to get it working on a windows machine and not mac OS. This outdated technology would only lead to further problems down the line if another engineer were to take over our project. </p>
@@ -69,7 +69,7 @@
 
                         <p>It was finally decided that we would not be able to use the pre-written Java application for our application, so now we are using Android Studio to develop the user interface side of the application. </p>
                     </div>
-                    <div class="container text-center">
+                    <div class="container">
                     <div class="col-sm-6">
                         <img src="img/success.png">
                         <li>Recieves data from gyroscope, accelerometer and magnometer: allows for a lot of possibilities regarding interpretation of data</li>
@@ -85,14 +85,14 @@
                     </div>
 
                     <div class="container-fluid">
-                        <h3><u>Fitbit API</u>[1]</h3>
+                        <h3><u>Fitbit API</u> [1]</h3>
                     </div>
 
                     <div class="container-fluid">
-                        
+
                         <p>With our initial task falling through, our client proposed we retrieve data from the Fitbit API and integrate this into our mobile application. The data is in the form of a json file and provides statistics such as calories, heart rate, average speed etc.</p>
                         <p>Although it is ideal that the data has already been analysed, this means we cannot analyse the raw data ourselves to find the specific statistics we wanted. As a result, we would only be able to collect general data rather than wheelchair specific data.</p>
-                        
+
                     </div>
 
                     <div class="container text-center">
@@ -117,11 +117,11 @@
                 </div>
 
                 <div class="container-fluid">
-                    <h3> <u>Algorithms: Inertial Measurement Unit (IMU)</u>[2]</h3>
+                    <h3><u>Algorithms: Inertial Measurement Unit (IMU)</u> [2]</h3>
                 </div>
 
                 <div class="container-fluid">
-                    
+
                     <p>Originally our application was going to retrieve data from the bespoke ARCC sensors our client provided.  This data came in the form of accelerometer, gyroscope and magnetometer data. Although our project no longer requires the analysis of data in this form, our initial research gave us an introduction to the possible interpretations of data using a wheelchair, which helped us utilise the data from the fitbit API further down the line. For this reason, it is important to note the initial research we undertook.  </p>
                 </div>
 
@@ -160,24 +160,24 @@
                     <div class="container-fluid">
                         <img src="img/v.png">
                         <h5>This is how the orientation of frame B relative to frame A is defined.</h5>
-                        <h5>rx, ry and rz define the components of the unit vector x, y and z in frame A respectively.</h5>                
+                        <h5>rx, ry and rz define the components of the unit vector x, y and z in frame A respectively.</h5>
                 </div>
 
                     <div class="container-fluid">
-                        <h4><strong><bold>1. The orientation described by A/Bq can be represented as the following rotation matrix:</bold></strong></h4> 
+                        <h4><strong><bold>1. The orientation described by A/Bq can be represented as the following rotation matrix:</bold></strong></h4>
                         <img src="img/e.png">
-                                       
+
                 </div>
 
                     <div class="container-fluid">
-                        <h4><strong><bold>2. From here, the Euler angle representation can be defined by the following equations</bold></strong></h4> 
+                        <h4><strong><bold>2. From here, the Euler angle representation can be defined by the following equations</bold></strong></h4>
                         <img src="img/el.png">
-                                       
+
                 </div>
                     <div class="container-fluid">
-                        <h4><strong><bold>3. Given the angle, the next step is to simply calculate the distance by finding the size of the circumference of the wheel and multiplying this by the number of times the wheel rotates. However, this analysis describes a massively simplified set of steps and in reality we were unable to implement the algorithm with our knowledge.</bold></strong></h4> 
-                        
-                                       
+                        <h4><strong><bold>3. Given the angle, the next step is to simply calculate the distance by finding the size of the circumference of the wheel and multiplying this by the number of times the wheel rotates. However, this analysis describes a massively simplified set of steps and in reality we were unable to implement the algorithm with our knowledge.</bold></strong></h4>
+
+
                 </div>
 
             <div class="container-fluid">
@@ -185,8 +185,7 @@
             </div>
 
             <div class="container-fluid">
-                
-                <p>A lot of the data from the fitbit API has already bee analysed and already provides us with statistics such as calories burnt, heart rate, distance, max speed and average speed.  However, we looked into interpreting this data to produce some interesting statistics. </p>
+                <p>A lot of the data from the fitbit API has already been analysed and already provides us with statistics such as calories burnt, heart rate, distance, max speed and average speed.  However, we looked into interpreting this data to produce some interesting statistics. </p>
             </div>
 
             <div class="container-fluid">
@@ -210,7 +209,7 @@
 
 
             </section>
-            <section id="section3"> 
+            <section id="section3">
                     <div class="container text-center">
                         <h2><strong> Summary</strong></h2>
                     </div>
@@ -223,7 +222,7 @@
                         <p><b>Json File Generator:</b> To produce the generator, we used Java with a bash script to automate the process.</p>
                         <p><b>ARCC Sensor Data Visualiser:</b> Again, to visualise the data from the ARCC sensors we used Java. This visualiser is accessed using a GUI, which was developed using SWING.</p>
                         <p><b>Fitbit API retrieval:</b></p>
-                        <p><b>Mobile Application with User Interface:</b> We used Android studio [3] for a mobile application. 
+                        <p><b>Mobile Application with User Interface:</b> We used Android studio [3] for a mobile application.
 
                         <p> Android Studio is the official IDE for Android, providing tools for building apps on Android devices. There are a number of key features Android Studio provides:</p>
                         <li> The Instant Run feature reduces the time it takes to update the app- it allows the user to push code and resource changes to a running app without having to build a new APK.</li>
@@ -231,15 +230,15 @@
                         <li>Device configuration allows developors to run apps faster than on a physical device using an emulator.</li>
 
                     </div>
-            </section>    
-            <section id="section4"> 
+            </section>
+            <section id="section4">
                     <div class="container text-center">
                         <h2><strong> References</strong></h2>
                     </div>
                     <p>[1] https://www.fitbit.com/dev/dev</br>
                         [2] http://x-io.co.uk/open-source-imu-and-ahrs-algorithms</br>
                         [3] https://developer.android.com/studio/index.html</p>
-            </section>         
+            </section>
 </div>
 </div>
 </div>
@@ -252,7 +251,7 @@
 
         <div class="footer-left">
             <p>
-                
+
                 COMP214P Systems Engineering - Team 31
             </p>
         </div>

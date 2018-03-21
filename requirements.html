@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="underlined active"><a href="index.html" class="fix-underline-a"><font color="black">HOME</font></a></li>
-                    <li class="underlined"><a href="requirements.html"><font color="black">REQUIREMENTS</font></a></li>
+                    <li class="underlined"><a href="requirements.html"><font color="black"><b><u>REQUIREMENTS</u></b></font></a></li>
                     <li class="underlined"><a href="research.html"><font color="black">RESEARCH</font></a></li>
                     <li class="underlined"><a href="hci.html"><font color="black">HCI</font></a></li>
                     <li class="underlined"><a href="design.html"><font color="black">DESIGN</font></a></li>
@@ -52,15 +52,15 @@
             </ul>
         </div>
         <div class="span9 my-content">
-            <section id="section1"> 
+            <section id="section1">
                 <div class="container">
-                    <h2><strong> Requirements</strong></h2>
+                    <h2><strong> Introduction and Goals</strong></h2>
                   </div>
                   <div class="container">
                     <h5><strong> Introduction to project background and client</strong></h5>
                     <p> At the beginning of our project, our client was Catherine Holloway. Catherine is a senior lecturer in the Department of Computer Science based in the UCL Interaction Centre. Catherine’s work is focused on the design of assistive technologies; she is currently working on a project called Power-Up!, which looks to design new power sources and interfaces for assistive technologies. </p>
 
-                    <p>Our project stemmed from Catherine’s idea to help people with disabilities; the initial concept was to develop an activity tracker relevant to a specific sport, i.e. wheelchair basketball, to help wheelchair-bound people track their statistics during a game and also monitor their overall health. 
+                    <p>Our project stemmed from Catherine’s idea to help people with disabilities; the initial concept was to develop an activity tracker relevant to a specific sport, i.e. wheelchair basketball, to help wheelchair-bound people track their statistics during a game and also monitor their overall health.
                     </p>
 
                     <p>However, due to unforeseen circumstances, our project and client changed. From this point, our client was Dr, Dean Mohamedally, a Principal Teaching Fellow for Applied Software Engineering and Industry Projects. Instead of requiring a particular user interface application for specific sensors, our new client requested a set of tools that could be used for the further development of assistive technologies. In this way, our client is now expecting a collection of smaller projects to retrieve, visualise and store data. </p>
@@ -75,8 +75,6 @@
 
                     </p>
 
-
-
                 </div>
             </section>
 
@@ -85,8 +83,8 @@
                     <h2><strong> Gathering Requirements: First Meeting with our Client</strong></h2>
                 </div>
                 <div class="container-fluid">
-                    
-                    <p> Our first step for gathering requirements was an initial meeting with our client, Catherine Holloway. This meeting told us what software and hardware the client is intending we use at this point and what the client is expecting regarding the features of the application. We also gathered information on what other data we would need to collected in order to complete the requirements. 
+
+                    <p> Our first step for gathering requirements was an initial meeting with our client, Catherine Holloway. This meeting told us what software and hardware the client is intending we use at this point and what the client is expecting regarding the features of the application. We also gathered information on what other data we would need to collected in order to complete the requirements.
                         </p>
                     <table class="table table-striped">
                       <thead>
@@ -101,21 +99,21 @@
                           <th scope="row"></th>
                             <td><b>Hardware</b>
                                 <p>The sensor: At this stage of the project, it was intended we use a bespoke sensor, developed within our client’s department specifically for this project. </p>
-                                <li>   bluetooth smart system on chip </li>
-                                <li>   air pressure/ temp </li>
-                                <li>   real time clock </li>
-                                <li>   micro SD card storage </li>
-                                <li>   battery level monitor  </li>
-                                <li>   non-volatile flash memory  </li>
+                                <li>   Bluetooth smart system on chip </li>
+                                <li>   Air pressure/ temp </li>
+                                <li>   Real time clock </li>
+                                <li>   Micro SD card storage </li>
+                                <li>   Battery level monitor  </li>
+                                <li>   Non-volatile flash memory  </li>
                                 <li>   9-axis intertial/ magnetometer sensor </li>
                                 <li>   Li-Ion or Li-Po battery 3.7v </li>
-
                                 <p>The wheelchair: the wheelchair available for testing does not have angled wheels, but the wheelchair that will be used in the final stages will be specially for wheelchair basketball and will have angled wheels.  </p>
-                                </td>
-                                              <td><p>• We will have the task of analysing gyroscope and accelerometer data</p>
+                            </td>
+                            <td>
+                                <p>• We will have the task of analysing gyroscope and accelerometer data</p>
                                 <p>•   The sensor will need to be attached to the wheelchair or the player</p>
                                 <p>•   Any sensor values will need to be offset in order to take into consideration the angle of the wheels.</p>
-                                </td>
+                            </td>
                         </tr>
                         <tr>
                               <th scope="row"></th>
@@ -146,11 +144,11 @@
                         <h2><strong> Gathering Requirements: Meeting with End User</strong></h2>
                     </div>
                     <div class="container-fluid">
-                            <p> 
-                                At this stage, we knew what software and hardware the project required but needed to gather more information to deduce the requirements for the end product. To do this, we arranged a meeting with Pete Donnelly, a wheelchair basketball player who is part of a team that trains in Brixton. We spoke with Pete and witnessed a training session to discover the following information. 
+                            <p>
+                                At this stage, we knew what software and hardware the project required but needed to gather more information to deduce the requirements for the end product. To do this, we arranged a meeting with Pete Donnelly, a wheelchair basketball player who is part of a team that trains in Brixton. We spoke with Pete and witnessed a training session to discover the following information.
                             </p>
                     </div>
-                        
+
                     <div class="container text-center">
                         <h3> <b>Information Gathered about End User</b></h3>
                       </div>
@@ -170,67 +168,72 @@
                                 <h4>At present, all the wheelchair basketball players are male. However, it is possible for future members to be female so the application should be gender neutral.</h4>
                             </div>
                         </div>
+
                         <h3> <b>Desired Features</b></h3>
-                            <div class="container text-center">
-                            <div class="col-sm-6">
-                                <h3>Must:</h3>
-                                    <li>connect to a phone to get stats/ player profiles</li>
-                                    <li>collect the following data: distance travelled over four separate quarters, average speed, top speed</li>
-                                    <li> have an easy to use interface</li>
-                                    <li>have an option to pause data collection (for time-outs etc)</li>
 
-                            </div>
-                            <div class="col-sm-6">
-                                <h3>Could:</h3>
-                                    <li>provide heart rate data</li>
-                                    <li>monitor passes and shots</li>
-                                    <li>provide calories burnt</li>
+                                <p>Below is the list of desired features by the end user:</p>
 
-                            </div>
-                    </div>
+                                <div class="col-sm-7">
+                                        <li> Connect to a phone to get stats / player profiles</li>
+                                        <li> Have an easy to use interface</li>
+                                        <li> Have an option to pause data collection (for time-outs etc)</li>
+                                        <li> Collect the following data: distance travelled over four separate quarters, average speed, top speed</li>
+                                </div>
+
+                                <div class="col-sm-4">
+                                        <li> Provide heart rate data</li>
+                                        <li> Monitor passes and shots</li>
+                                        <li> Provide calories burnt</li>
+                                </div>
 
                    </div>
 
 <div class="container">
-        <h2><strong> Gathering Requirements: Surveys</strong></h2>
-    </div>
-    <div class="container-fluid">
-            <p> 
-                Our next step towards finalizing our requirements was to gather information through surveys.  The following questions were asked so we could find the most common answer amongst candidates and produce an application suitable for most wheelchair basketball players. 
-            </p>
-    </div>
+        <h2><strong>Gathering Requirements: Surveys</strong></h2>
+</div>
+      <p>
+          Our next step towards finalizing our requirements was to gather information through surveys.  The following questions were asked so we could find the most common answer amongst candidates and produce an application suitable for most wheelchair basketball players.
+      </p>
 
     <div class="row">
                             <div class="col-sm-6">
-                                <img src="img/phonePlatform.png" class="icon" width="500">
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="img/comfortableWearing.png" class="icon" width="500">
+                                      <img src="img/phonePlatform.png" class="icon" width="500">
+                                  </div>
 
+                                  <div class="col-sm-6">
+                                      <img src="img/comfortableWearing.png" class="icon" width="500">
+                                  </div>
                             </div>
+    <div class="row">
+
                             <div class="col-sm-6">
                                 <img src="img/howOld.png" class="icon" width="500">
                             </div>
+
                             <div class="col-sm-6">
                                 <img src="img/timePlayedFor.png" class="icon" width="500">
-
                             </div>
+    </div>
+    <div class="row">
+
                             <div class="col-sm-6">
                                 <img src="img/currentTracking.png" class="icon" width="500">
                             </div>
+
                             <div class="col-sm-6">
                                 <img src="img/desireToTrack.png" class="icon" width="500">
-
                             </div>
+    </div>
+    <div class="row">
+
                             <div class="col-sm-6">
                                 <img src="img/otherTracking.png" class="icon" width="500">
                             </div>
+
                             <div class="col-sm-6">
                                 <img src="img/disability.png" class="icon" width="500">
-
                             </div>
     </div>
-        
 
     <div class="container text-center">
         <h3><b>Analysis of Survey</b></h3>
@@ -290,17 +293,17 @@
         </table>
 
       </div>
+    </section>
 
+            <section id="section3">
 
-            </section>
-            <section id="section3"> 
-                                                <div class="container">
+                <div class="container">
                     <h2><strong> Personas</strong></h2>
-                                <p> 
-                            We created a number of personas to represent the client base who would use our application. In this way we were able to see the key functionalities our app would require to suite a broad set of users. 
+                          <p>
+                            We created a number of personas to represent the client base who would use our application. In this way we were able to see the key functionalities our app would require to suite a broad set of users.
                         </p>
                 </div>
-                    
+
                 <div class="container text-center">
                     <img src="img/persona1.png">
                 </div>
@@ -313,43 +316,37 @@
                 <div class="container">
                     <p>Mike is a 30 year old man who has recently decided to take up wheelchair basketball in order to improve his health and fitness. However, Mike has never tried wheelchair basketball before and also finds it difficult to motivate himself to improve. He can’t see any improvements between games, and has no way to measure how hard he is trying so finds it easy to be lazy during a game and let the rest of the team do the work. In order to motivate himself, Mike starts measuring the number of passes he does and shots he takes compared to other teammates using the app. He finds himself at the bottom of the leaderboard for the first two games and decides to try harder in the next game. The number of Mike’s passes and shots begins to increase from game to game, and Mike also feels his fitness improve as he doesn’t feel as out of breath as he used to. </p>
                 </div>
-            </section>    
-            <section id="section4"> 
-                    <div class="container">
+            </section>
+            <section id="section4">
+              <div class="container text-center">
+
                         <h2><strong> Storyboards</strong></h2>
-                    </div>
-
-
+                </div>
                     <div class="container">
                         We designed the following storyboards as a human-centred design approach to capture how our application will actually work in place.
                     </div>
 
-
-                    <div class="container">
-                        <h4><strong> Storyboard 1: Lisa</strong></h4>
-                    </div>
+                    <h4><strong> Storyboard 1: Lisa</strong></h4>
 
                     <div class="container">
                         <u><img src="img/lisa1.png"></u>
                         <u><img src="img/lisa2.png"></u>
                     </div>
 
-                        <div class="container">
-                        <h4><strong> Storyboard 2: Mike</strong></h4>
-                    </div>
+                   <h4><strong> Storyboard 2: Mike</strong></h4>
 
                     <div class="container">
                         <u><img src="img/mike1.png"></u>
                         <u><img src="img/mike2.png"></u>
                     </div>
-            </section>   
+
+            </section>
+
             <section id="section5">
-                                <div class="container text-center">
+                <div class="container text-center">
                     <h2><strong>MoScoW Requirements</strong></h2>
                     <p>Following our initial research to determine our requirements, our project and therefore our requirements changed drastically due to problems with existing legacy code on our client's side. At this point, the research we had undertaken to deduce our final requirements was relevant for our user interface but not could be applied to the back end features. However, with a week before submission, we were unable to complete extensive research for our new requirements. Instead we met with our new client, Dean Mohamedally, to produce the following requirements: </p>
-
                 </div>
-                <div class="container-fluid">
                     <table class="table table-striped">
                       <thead>
                         <tr>
@@ -358,7 +355,7 @@
                           <th>Priority</th>
                           <th>Feature</th>
 
-                          
+
                         </tr>
                       </thead>
                       <tbody>
@@ -470,12 +467,12 @@
                       </tbody>
                     </table>
 
-                  </div>
+
             </section>
             <section id="section6">
-                    <div class="container">
+              <div class="container text-center">
                         <h2><strong> Use Cases</strong></h2>
-                    </div>
+                  </div>
 
                     <div class="container-fluid">
                     <table class="table table-striped">
@@ -486,7 +483,7 @@
                           <th>Description</th>
                           <th>Primary User</th>
                           <th>Secondary User</th>
-                          <th>Pre Condition</th>   
+                          <th>Pre Condition</th>
                           <th>Expected Flow</th>
                           <th>Post Condition</th>
                           <th>Alternative Flow</th>
@@ -535,8 +532,8 @@
                     <img src="img/useCase.png">
                   </div>
 
-                
-            </section>      
+
+            </section>
 </div>
 </div>
 </div>
@@ -549,7 +546,7 @@
 
         <div class="footer-left">
             <p>
-                
+
                 COMP214P Systems Engineering - Team 31
             </p>
         </div>

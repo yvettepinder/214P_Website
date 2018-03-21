@@ -86,23 +86,23 @@ body {
 
 .container img {
     max-height: 1000px;
-    max-width: 700px; 
+    max-width: 700px;
 }
 
 
- 
+
 .container-fluid {
     max-width: 1150px;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     margin: auto;
 }
 
 .container-fluid img {
     max-height: 900px;
     max-width: 600px;
-    padding: 5rem;
+    padding: 3rem;
 }
 
 
@@ -203,7 +203,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     float: none !important;
-    border-radius: 50%;    
+    border-radius: 50%;
 }
 
 .navbar {
