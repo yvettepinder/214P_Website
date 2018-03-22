@@ -59,30 +59,63 @@
             </div>
             <div class="container-fluid">
                 <h3>Json File Generator</h3>
-                <p>The Json file generator, created using Java, emulates data from a Fitbit API. A bash script was used to automate the process. </p>
+                <p>This program was developed to emulate the JSON data one would get from the fitbit api. The program also has the advantage of being able to create as many users with as many activities one would want. All the data that is generated is around 90% accurate, with statistics such as calories calculated using the MET value for that particular type of activity. The process is also automated using a bash script that is found within the application folder. The future of this application could be found in different research areas, where scientists could study this generated data and perform analysis on it.
+</p>
+            </div>
+            <div>
+                <img src="img/jsonpic.png" style="width:1200px;height:200px;">
+
+            </div>
+            <div class="container-fluid">
+                <h3>Cloud</h3>
+                <p>The main idea behind our application is to allow users to see their data online as well. Thus, the mobile application sends POST requests to a RESTful API composed of a nodejs server and a cosmos database from Microsoft Azure. At first, the system was tested locally using a nodejs server and a mongodb database. After successfully establishing the connection between the Android application and the previous components, we deployed everything on Azure. The way the system now works is every time the json file is modified within the android application, a post request will be sent to the nodejs server which will update the cosmos database. In the future, we would like to add functions for data retrieval which would therefore eliminate the need of using any internal storage used by the android application.  </p>
+            </div>
+          <div class="container-fluid">
+                <img src="img/cloud.png" style="width:1000px;height:300px;">
+
+
             </div>
             <div class="container-fluid">
                 <h3>ARCCS Sensor Visualiser</h3>
-                <p>Our visualiser is a java application that takes in sample IMU sensor data and displays it on a graph. Both the gyroscope and accelerometer data can be formatted using the visualiser. To access the visualiser, the user uses a simple GUI created using SWING.</p>
+
+                <p>Initially designed for the ARCCS sensors provided by Dr. Catherine Holloway, this program is able to plot the data that one would get from the sensors in different file formats such as csv. It parses the entire file and then displays the data using JFreeChart, currently plotting the acceleration and gyroscope data by the x,y coordinates. Thus, it can be used to observe relevant changes in the motion of the objects the sensors are attached to. For example, we used it to measure the number of wheel rotations the user performs during a session for recording data from the sensors. To access the visualiser, the user uses a simple GUI created using Swing.</p>
+
+                <img src="img/visualiser.png" style="width:1200px;height:200px;">
+
+
+
             </div>
             <div class="container-fluid">
                 <h3>Android Mobile Application</h3>
-                <p>On the end user side of the application, we created an Android Application in Android Studio. The application is integrated with the Json file generator, and displays and analyses the emulated data. </p>
+                <p>he end user side of the application, we created an Android Application in Android Studio. The application is integrated with the Json file generator (which is partially modified to fit the needs of our application), and displays and analyses the emulated data. After any modification that happens to the json from the internal memory of the phone, the application sends a POST request to a nodejs server, which inserts it into a Mongo database.
+
+ </p>
             </div>
+
+
             <div class="container-fluid">
-                <h3>Retrieving Data from Fitbit API</h3>
-                <p>We integrated our interface with open source code we found online.</p>
+                <h3>Angularjs App</h3>
+                <p>In order to retrieve fitbit data from one user, we are using a separate angularjs application. It is connected to a fitbit developer account. In order to use the application, one would need a Fitbit wristband connected to such an account. After performing all these steps, one can retrieve any type of data from the apis that are found within the Fitbit API. For the moment, tt displays just the heart rate, but the code can be changed to display almost anything from the api.</p>
+          </div>
+          <div class="container-fluid">
+                <img src="img/fitbit.png" style="width:1000px;height:300px;">
+
+
             </div>
+     
+
+
 
             </section>
             <section id="section2">
             <div class="container">
                 <div class="container-fluid">
                 <h2><strong> Class Diagram</strong></h2>
-            </div>
+
                 <img src="img/uml.png" style="width:1200px;height:600px;">
 
             </div>
+          </div>
 
 
             </section>
