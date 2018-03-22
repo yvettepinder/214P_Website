@@ -313,10 +313,8 @@
                     <div class="container">
                         <h2><strong> Acceptance Testing</strong></h2>
 
-                        <p>As our application is to be used by a client with potentially no technical expertise, it is essential that we undergo usability testing. In this way, we can spot and fix problems before the application is finished. As part of our usability testing process, we considered the following five elements: </p>
-                    </div>
+                        <p>As our application is to be used by a client with potentially no technical expertise, it is essential that we undergo usability testing. In this way, we can spot and fix problems before the application is finished. As part of our usability testing process for the Android mobile application, we considered the following five elements: </p>
 
-                    <div class="container text-center">
                         <h3><strong>1. Learnability</strong></h3>
 
                         <p>Learnability refers to how easy it is for users to accomplish basic tasks the first time they encounter the design. As part of our test for learnbility, we asked our client to use the application with no prior instruction as to how it works. Our application only has few buttons and each button is labeled. For this reason the app needs no further instruction set and there for is very learnable. </p>
@@ -348,9 +346,14 @@
                         <p>The approach we initially considered to test our user interface was to manually perform a set of user operations on our application and verify that is is behaving correctly.</p>
                         <p>To do this, we considered all the possible use cases and ways of navigating through the application. Following each input (either an actual input or physical input such as pressing a button), we verified that the outcome was expected. By this we mean either the application took us to the correct page or the input we manually entered was then displayed correctly.</p>
 
-                        <p> At present, this method is fine for our application because it is simple and does not have many featuries. However, this can be time-consuming, tedious and error-prone with further development of the app. For our next stage of UI testing, we wll to write automated UI tests to perform the operations, allowing us to run our tests quickly and reliably in a repeatable manner. </p>
-                        <p>To perform the automated tests on our application in Android Studio, we will use the testing framework Espresso, which allows you to programmatically simulate user actions and test complex intra-app user interactions.</p>
+                        <p> However, this can be time-consuming, tedious and error-prone with further development of the app. For our next stage of UI testing, we wrote automated UI tests to perform the operations, allowing us to run our tests quickly and reliably in a repeatable manner. </p>
+                        <p>To perform the automated tests on our application in Android Studio, we used the testing framework Espresso, which allows you to programmatically simulate user actions and test complex intra-app user interactions.</p>
+                        <p>In particular, we looked at the navigation of the application using intents to ensure each button click took us to the correct activity. We tested the expected elements of the new activity were displayed.</p>
                     </div>
+                    <div class="container">
+                      <img src="img/espresso.png">
+                    </div>
+
             </section>
 </div>
 </div>
