@@ -59,17 +59,20 @@
             </div>
             <div class="container-fluid">
                 <h3>Json File Generator</h3>
-                <p>This program was developed to emulate the JSON data one would get from the fitbit api. The program also has the advantage of being able to create as many users with as many activities one would want. All the data that is generated is around 90% accurate, with statistics such as calories calculated using the MET value for that particular type of activity. The process is also automated using a bash script that is found within the application folder. The future of this application could be found in different research areas, where scientists could study this generated data and perform analysis on it.</p>
+                <p>The Json file generator, created using Java, emulates data from a Fitbit API. A bash script was used to automate the process. </p>
             </div>
             <div class="container-fluid">
                 <h3>ARCCS Sensor Visualiser</h3>
-                <p>Initially designed for the ARCCS sensors provided by Dr. Catherine Holloway, this program is able to plot the data that one would get from the sensors in different file formats such as csv. It parses the entire file and then displays the data using JFreeChart, currently plotting the acceleration and gyroscope data by the x,y coordinates. Thus, it can be used to observe relevant changes in the motion of the objects the sensors are attached to. For example, we used it to measure the number of wheel rotations the user performs during a session for recording data from the sensors. To access the visualiser, the user uses a simple GUI created using Swing.</p>
+                <p>Our visualiser is a java application that takes in sample IMU sensor data and displays it on a graph. Both the gyroscope and accelerometer data can be formatted using the visualiser. To access the visualiser, the user uses a simple GUI created using SWING.</p>
             </div>
             <div class="container-fluid">
                 <h3>Android Mobile Application</h3>
-                <p>On the end user side of the application, we created an Android Application in Android Studio. The application is integrated with the Json file generator (which is partially modified to fit the needs of our application), and displays and analyses the emulated data. After any modification that happens to the json from the internal memory of the phone, the application sends a POST request to a nodejs server, which inserts it into a Mongo database. </p>
+                <p>On the end user side of the application, we created an Android Application in Android Studio. The application is integrated with the Json file generator, and displays and analyses the emulated data. </p>
             </div>
-     
+            <div class="container-fluid">
+                <h3>Retrieving Data from Fitbit API</h3>
+                <p>We integrated our interface with open source code we found online.</p>
+            </div>
 
             </section>
             <section id="section2">
@@ -171,73 +174,66 @@
             <section id="section6">
               <div class="container-fluid">
                 <h2><strong> Key Functionalities Implementation</strong></h2>
-              </div>
 
 
-              <div class="container-fluid">
-              <h3>Front End Functionalities</h3>
-            </div>
-            <div class="container-fluid">
+
+              <h3>Front End Technologies</h3>
 
               <p>The front end part of the application was built primarily using XML files and layout to create and customise the different screens of our application. XML is completely compatible with Java and is fully portable to be used with any application that can process it. It allowed us to create an interactive and functional display which, when combined with the application logic, creates an attractive and easy to use user experience.</p>
 
               <p>Using Android Studio allowed us to quickly create and adjust these files using their interface. From creating different objects such as buttons, to managing the multiple different views possible. A number of different images and familiar icons relating to basketball were also added to the app.
               </p>
-            </div>
-            <div class="container-fluid">
 
-              <p><b>Variables Display</b></p>
+              <h4>Variables Display</h4>
               <p>The application uses two different adapters in order to create customisable horizontal and vertical listview displays. The list adapter is used to alter the regular listview object. It allows the application to support multiple different user defined display types in the list by specifying the “Type” parameter. For instance, if a new display, such as a mini graph for heart rate, is required, the system could easily support this addition. The recycler adapter is used to create a horizontal list display. This comes with a click listener which handles changes in the graph display.</p>
-            </div>
 
-            <div class="container-fluid">
-
-              <p><b>Graphs</b></p>
+              <h4>Graphs</h4>
               <p>A major functionality of the front end design makes use of the MPAndroid Chart Library by PhilJay to display a graphical representation of the data. Bar Charts were used to display a summary of a data variable. These particular data variables are selected by the user in the Recycler View which communicates with the graph display to automatically update its contents upon selection with animations. The graph also features two different types of listeners. The first is a normal press which will result in the game name of the selected bar popping up on the screen. The second is a long press which will take the user to GameDisplay page for that game. </p>
-              </div>
-              <div class="container-fluid">
 
-              <p><b>Scaling</b></p>
+
+              <h4>Scaling</h4>
               <p>All pages are scalable to different device sizes through the use of layout weights and scroll views. For example, the main dashboard will adjust accordingly to fit the screen, giving emphasis on larger widgets such as the graph display as this is key to the importance of the app. Longer display string variables will also have their font size reduced to avoid overlapping widgets.  </p>
-              </div>
-              <div class="container-fluid">
 
-              <p><b>Input Assistance and Feedback</b></p>
+
+              <h4>Input Assistance and Feedback</h4>
               <p>All user input fields have keyboard entry tools related to the type of input required. For example, auto word capitalisation for titles, number pads for integer inputs and . In particular, the system includes date and time picker widgets which restrict invalid characters and automatically output data in required formats for DataController.
               Any key functionalities performed, such as adding and deleting a game, are followed up by popup toast messages to inform the user of the action performed. This helps ensure they know the action was successful.
               </p>
 
-            </div>
+              <h4>Analytics</h4>
+              <p>
+                Our system utilises Facebook’s analytics system. This provides an insight on app usage and user engagement. We used this to track how many unique users accessed the app and how frequently. It also provides us with information about the kind of user using the app.
+              </p>
 
-                          <div class="container-fluid">
+          <img src="img/FacebookAnalytics.png">
+
               <h3>Back End Functionalities</h3>
-            </div>
 
-            <div class="container-fluid">
 
-              <p><b>JSON File Generator</b></p>
-              <p>The Android application ”GameOn!” is using the Json File Generator logic to create the data for the user when he adds new training sessions. There is however a small difference, which is the use of the library Gson. This helps us use normal java code that then is converted to json objects and json arrays. </p>
-              <p>For example, a user object is converted to a json object, whereas an ArrayList could be converted to a json array containing different json objects. Therefore, this increases our consistency throughout the code without using any additional libraries to write the data to the json file besides the normal FileWriter and streams. </p>
-              <p>The generation of data is handled by the Random class (for different types of number) and there are certain restrictions that do not allow miscalculations to happen. Different variables such as calories are calculated using the MET value of wheelchair basketball (from the compendium of sports https://sites.google.com/site/compendiumofphysicalactivities/Activity-Categories/sports), while also taking into consideratino the weight. </p>
-            </div>
 
-              <div class="container-fluid">
+            <h4><p>JSON File Generator</p></h4>
+            <p>The Android application ”GameOn!” is using the Json File Generator logic to create the data for the user when he adds new training sessions. There is however a small difference, which is the use of the library Gson. This helps us use normal java code that then is converted to json objects and json arrays. </p>
+            <p>For example, a user object is converted to a json object, whereas an ArrayList could be converted to a json array containing different json objects. Therefore, this increases our consistency throughout the code without using any additional libraries to write the data to the json file besides the normal FileWriter and streams. </p>
+            <p>The generation of data is handled by the Random class (for different types of number) and there are certain restrictions that do not allow miscalculations to happen. Different variables such as calories are calculated using the MET value of wheelchair basketball (from the compendium of sports https://sites.google.com/site/compendiumofphysicalactivities/Activity-Categories/sports), while also taking into consideratino the weight. </p>
 
-              <p><b>Server</b></p>
-              <p>To be able to send post requests to the nodejs server, we are using the Volley library. After the file has been received by the server, the data is processed and sent to the Mongo database using the Mongoose module. </p>
-              
-            </div>
+                  <h4><p>Server</p></h4>
+            <p>To be able to send post requests to the nodejs server, we are using the Volley library. After the file has been received by the server, the data is processed and sent to the Mongo database using the Mongoose module. </p>
 
-           <div class="container-fluid">
+                  <h4><p>ARCCS Sensors</p></h4>
+            <p>As for the ARCCS visualiser, we are parsing the csv file using a parser and storing everything into maps and arraylists, from which we can easily retrieve the data and process display it using JFreeChart. </p>
 
-              <p><b>ARCCS Sensors</b></p>
-              <p>As for the ARCCS visualiser, we are parsing the csv file using a parser and storing everything into maps and arraylists, from which we can easily retrieve the data and process display it using JFreeChart. </p>
-              
+
+
+
+</div>
+
             </div>
 
             </section>
 
+            <section id="section7">
 
+            </section>
 </div>
 </div>
 </div>
